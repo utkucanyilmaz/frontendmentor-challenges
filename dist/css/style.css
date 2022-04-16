@@ -298,6 +298,7 @@ button:hover::before,
 }
 
 .header .overlay {
+  z-index: 1;
   opacity: 0;
   position: fixed;
   top: 0px;
@@ -309,6 +310,7 @@ button:hover::before,
 }
 
 .header nav {
+  z-index: 3;
   position: relative;
   background-color: white;
   padding-top: 1.0625rem;
@@ -336,6 +338,7 @@ button:hover::before,
 }
 
 .header__menu {
+  z-index: 2;
   position: absolute;
   width: calc(100% - 1.5rem);
   left: 50%;
