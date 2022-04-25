@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --primary-color: hsl(0, 0%, 95%);
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  background-color: var(--primary-color);
+  color: hsla(0, 0%, 100%, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.container {
+  max-width: 375px;
+  margin: 88px 24px;
+  border-radius: 5px;
+}
+
+.pd {
+  padding: 48px;
+}
+
+.button {
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50px;
+  margin-top: 25px;
+  padding: 14px 28px;
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  transition: all 150ms ease-in-out;
+}
+
+.orange {
+  color: hsl(31, 77%, 52%);
+}
+.cyan {
+  color: hsl(184, 100%, 22%);
+}
+
+.dark-cyan {
+  color: hsl(179, 100%, 13%);
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 10px 10px 0 0;
+}
+
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 0 10px 10px;
+}
+
+.sedans__title,
+.suvs__title,
+.luxury__title {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 40px;
+  color: var(--primary-color);
+  margin-top: 32px;
+}
+
+.sedans__description,
+.suvs__description,
+.luxury__description {
+  margin-top: 26px;
+  line-height: 1.63;
+}
+
+@media (min-width: 900px) {
+  main {
+    display: flex;
+  }
+
+  .container {
+    max-width: 920px;
+    margin-top: 171px;
+  }
+
+  .button {
+    font-size: 15px;
+    padding: 12px 30px;
+    margin-top: 84px;
+  }
+
+  .sedans {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .luxury {
+    border-radius: 0 10px 10px 0px;
+  }
+}
