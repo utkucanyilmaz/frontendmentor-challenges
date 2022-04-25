@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: hsl(204, 43%, 93%);
+}
+
+.component {
+  max-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  background-color: white;
+  margin: 72px 32px 76px 32px;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.pd {
+  padding: 28px 24px 32px 24px;
+}
+
+.join__title {
+  color: hsl(179, 62%, 43%);
+  font-size: 19.52px;
+}
+
+.join__refund {
+  color: hsl(71, 73%, 54%);
+  font-size: 15.4px;
+  line-height: 1.3;
+  margin-top: 24px;
+}
+
+.join__features {
+  color: hsl(218, 22%, 67%);
+  font-size: 13.7px;
+  margin-top: 18px;
+  line-height: 1.85;
+}
+
+.subscription {
+  background-color: hsl(179, 62%, 43%);
+  color: hsl(204, 43%, 93%);
+}
+
+.subscription__type {
+  font-size: 17.52px;
+  margin-top: -3px;
+}
+
+.subscription__pricing {
+  margin-top: 17px;
+}
+
+.subscription__price {
+  font-size: 31.8px;
+  font-weight: 700;
+}
+.subscription__period {
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-left: 4px;
+  font-size: 15.6px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.subscription__description {
+  margin-top: 8px;
+  font-size: 15.6px;
+}
+
+.subscription__signup {
+  border: none;
+  color: white;
+  width: 100%;
+  background-color: hsl(71, 73%, 54%);
+  margin-top: 31px;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.whyus {
+  background-color: hsl(179, 62%, 48%);
+  margin-top: -7px;
+  border-radius: 5px;
+  color: hsl(204, 43%, 93%);
+}
+
+.whyus__title {
+  font-size: 17.5px;
+  margin-top: -3px;
+}
+
+ul {
+  list-style: none;
+  margin-top: 18px;
+  margin-bottom: -10px;
+}
+
+ul li {
+  font-size: 13.6px;
+  line-height: 1.48;
+}
+
+@media (min-width: 900px) {
+  .component {
+    max-width: 699px;
+
+    margin-top: 164px;
+  }
+  .container {
+    display: grid;
+    grid-template-areas: "join join" "subscription whyus";
+  }
+  .pd {
+    padding: 45px 40px 40px 40px;
+  }
+
+  .join {
+    grid-area: join;
+  }
+
+  .join__title {
+    font-size: 23.4px;
+    margin-top: -6px;
+  }
+  .join__refund {
+    font-size: 18.4px;
+  }
+  .join__features {
+    font-size: 15.7px;
+    margin-top: 8px;
+    line-height: 1.7;
+  }
+
+  .subscription {
+    grid-area: subscription;
+    padding-right: 5px;
+    border-radius: 0 0 0px 5px;
+  }
+
+  .subscription__signup {
+    width: 87%;
+    margin-top: 29px;
+    padding: 16px;
+  }
+
+  .whyus {
+    grid-area: whyus;
+    border-radius: 0 0 5px 0;
+    margin-top: 0;
+  }
+}
