@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+body {
+  font-family: "League Spartan", sans-serif;
+  background-color: hsl(0deg, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  max-width: 375px;
+  padding: 24px;
+}
+
+.description {
+  margin-top: 60px;
+  text-align: center;
+}
+.description-title {
+  color: hsl(300deg, 43%, 22%);
+  font-size: 40px;
+  line-height: 0.8;
+  letter-spacing: -1px;
+}
+.description-text {
+  color: hsl(303deg, 10%, 53%);
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 1.29;
+}
+
+.reviews {
+  margin-top: 44px;
+}
+
+.review {
+  background-color: hsl(300deg, 24%, 96%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 1px;
+  border-radius: 8px;
+}
+.review-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.review-stars i.fa-star {
+  color: hsl(39deg, 91%, 65%);
+}
+.review-stars i.fa-star:not(:first-of-type) {
+  margin-left: 8px;
+}
+.review-descp {
+  margin-top: 10px;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+  color: hsl(300deg, 43%, 22%);
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+.testimonial {
+  background-color: hsl(300deg, 43%, 22%);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 38px 32px;
+}
+.testimonial-user {
+  display: flex;
+  flex-direction: row;
+}
+.testimonial-user-text {
+  margin-left: 24px;
+  font-size: 18px;
+}
+.testimonial-user-text-name {
+  color: hsl(300deg, 24%, 96%);
+}
+.testimonial-user-text-descp {
+  font-size: 16px;
+  color: hsl(333deg, 80%, 67%);
+}
+.testimonial-user-image {
+  width: 40px;
+  height: 40px;
+}
+.testimonial-user-image img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.testimonial-comment {
+  color: hsl(300deg, 24%, 96%);
+  margin-top: 32px;
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.review:not(:first-of-type),
+.testimonial:not(:first-of-type) {
+  margin-top: 16px;
+}
+
+.bg-t-d {
+  display: none;
+}
+.bg-t-m {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bg-b-d {
+  display: none;
+}
+.bg-b-m {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (min-width: 1440px) {
+  .desktop {
+    display: flex;
+  }
+  .bg-t-d {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .bg-t-m {
+    display: none;
+  }
+  .bg-b-d {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .bg-b-m {
+    display: none;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin-top: 30px;
+    margin-left: 40px;
+  }
+  .description {
+    text-align: left;
+    width: 39%;
+  }
+  .description-title {
+    font-size: 54px;
+    line-height: 0.93;
+  }
+  .reviews {
+    margin: 86px auto auto;
+    max-width: 61%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .review {
+    flex-direction: row;
+    width: 400px;
+    padding: 12px;
+  }
+  .review-descp {
+    margin-left: 34px;
+  }
+  .review:nth-of-type(1) {
+    margin-right: 14px;
+  }
+  .review:nth-of-type(2) {
+    margin-left: 34px;
+  }
+  .review:nth-of-type(3) {
+    margin-left: 134px;
+  }
+  .testimonials {
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-top: 59px;
+    position: relative;
+  }
+  .testimonial {
+    max-width: 351px;
+    padding: 38px 30px;
+  }
+  .testimonial:not(:first-of-type) {
+    margin-left: 30px;
+  }
+  .testimonial:nth-of-type(2) {
+    position: absolute;
+    top: 8px;
+    left: 351px;
+  }
+  .testimonial:nth-of-type(3) {
+    position: absolute;
+    top: 26px;
+    left: 732px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
