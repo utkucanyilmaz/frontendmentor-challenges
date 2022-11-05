@@ -31,7 +31,7 @@
       }
     </style>
   </head>
-  <body class="font-kumbh relative w-screen h-screen modal">
+  <body class="relative w-screen h-screen font-kumbh">
     <header class="max-w-[1110px] mx-auto">
       <nav
         class="h-[113px] w-full flex flex-row justify-between border-b-2 border-b-lightgrayishblue"
@@ -49,7 +49,7 @@
           </ul>
         </div>
         <div class="flex flex-row space-x-11 items-center justify-center">
-          <button class="">
+          <button class="hover:saturate-[100%] hover:brightness-[0%]">
             <img src="./images/icon-cart.svg" alt="" />
           </button>
           <img
@@ -60,43 +60,54 @@
         </div>
       </nav>
     </header>
+
     <main class="max-w-[1110px] mx-auto p-12 mt-[42px] flex space-x-16">
       <div>
-        <div class="w-[445px] h-[445px]">
+        <div class="w-[445px] h-[445px]" id="product">
           <img
             class="w-full h-full rounded-2xl cursor-pointer"
             src="./images/image-product-1.jpg"
             alt="Product"
+            id="product-image"
           />
         </div>
 
         <div class="flex flex-row space-x-8 w-[445px] mt-8">
-          <div class="active">
+          <div
+            class="active transition-opacity cursor-pointer thumbnail border-2"
+          >
             <img
-              class="rounded-xl w-[88px] h-[88px] transition-opacity opacity-60 cursor-pointer"
+              class="rounded-xl w-[88px] h-[88px] opacity-60"
               src="./images/image-product-1-thumbnail.jpg"
               alt="product thumb"
             />
           </div>
-          <div>
+
+          <div
+            class="thumbnail transition-opacity hover:opacity-60 border-2 border-transparent"
+          >
             <img
-              class="rounded-xl w-[88px] h-[88px] cursor-pointer transition-opacity hover:opacity-60"
+              class="rounded-xl w-[88px] h-[88px] cursor-pointer"
               src="./images/image-product-2-thumbnail.jpg"
               alt="product thumb"
             />
           </div>
 
-          <div>
+          <div
+            class="thumbnail transition-opacity hover:opacity-60 border-2 border-transparent"
+          >
             <img
-              class="rounded-xl w-[88px] h-[88px] cursor-pointer transition-opacity hover:opacity-60"
+              class="rounded-xl w-[88px] h-[88px] cursor-pointer"
               src="./images/image-product-3-thumbnail.jpg"
               alt="product thumb"
             />
           </div>
 
-          <div>
+          <div
+            class="thumbnail transition-opacity hover:opacity-60 border-2 border-transparent"
+          >
             <img
-              class="rounded-xl w-[88px] h-[88px] cursor-pointer transition-opacity hover:opacity-60"
+              class="rounded-xl w-[88px] h-[88px] cursor-pointer"
               src="./images/image-product-4-thumbnail.jpg"
               alt="product thumb"
             />
@@ -162,10 +173,12 @@
     </main>
 
     <div
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center justify-center"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex-col items-center justify-center hidden"
+      id="modal-content"
     >
       <button
         class="absolute -top-14 right-1 rounded-full flex items-center justify-center z-20"
+        id="close"
       >
         <img
           class="w-5 h-5 hover:invert-[68%] hover:sepia-[49%] hover:saturate-[5436%] hover:hue-rotate-[348deg] hover:brightness-[101%] hover:contrast-[100%]"
@@ -175,6 +188,7 @@
       </button>
 
       <button
+        id="next"
         class="absolute rounded-full flex items-center justify-center top-56 -right-7 z-20 bg-white w-[58px] h-[58px]"
       >
         <img
@@ -185,6 +199,7 @@
       </button>
 
       <button
+        id="prev"
         class="absolute rounded-full flex items-center justify-center top-56 -left-7 z-20 bg-white w-[58px] h-[58px]"
       >
         <img
@@ -196,6 +211,7 @@
 
       <div class="w-[550px] h-[550px]">
         <img
+          id="modal-product-image"
           class="w-full h-full rounded-2xl cursor-pointer"
           src="./images/image-product-1.jpg"
           alt="Product"
@@ -205,14 +221,17 @@
       <div
         class="flex flex-row items-center justify-center space-x-8 w-[445px] mt-8"
       >
-        <div class="active bg-white rounded-2xl">
+        <div class="active rounded-2xl transition-opacity border-2 modal-thumb">
           <img
-            class="rounded-xl w-[88px] h-[88px] transition-opacity opacity-60 cursor-pointer"
+            class="rounded-xl w-[88px] h-[88px] transition-opacity cursor-pointer opacity-60"
             src="./images/image-product-1-thumbnail.jpg"
             alt="product thumb"
           />
         </div>
-        <div class="bg-white rounded-2xl">
+
+        <div
+          class="rounded-2xl border-2 transition-opacity border-transparent modal-thumb"
+        >
           <img
             class="rounded-xl w-[88px] h-[88px] cursor-pointer transition-opacity hover:opacity-60"
             src="./images/image-product-2-thumbnail.jpg"
@@ -220,7 +239,9 @@
           />
         </div>
 
-        <div class="bg-white rounded-2xl">
+        <div
+          class="rounded-2xl border-2 transition-opacity border-transparent modal-thumb"
+        >
           <img
             class="rounded-xl w-[88px] h-[88px] cursor-pointer transition-opacity hover:opacity-60"
             src="./images/image-product-3-thumbnail.jpg"
@@ -228,7 +249,9 @@
           />
         </div>
 
-        <div class="bg-white rounded-2xl">
+        <div
+          class="rounded-2xl border-2 transition-opacity border-transparent modal-thumb"
+        >
           <img
             class="rounded-xl w-[88px] h-[88px] cursor-pointer transition-opacity hover:opacity-60"
             src="./images/image-product-4-thumbnail.jpg"
@@ -236,6 +259,47 @@
           />
         </div>
       </div>
+    </div>
+
+    <div
+      class="absolute bg-white top-24 right-[330px] flex flex-col shadow-2xl z-10"
+    >
+      <div class="p-5 border-b-2 border-lightgrayishblue font-bold">Cart</div>
+      <div
+        class="px-28 py-20 flex items-center justify-center font-bold text-darkgrayishblue"
+      >
+        Your cart is empty.
+      </div>
+      <!-- <div class="py-6 px-5">
+        <div class="flex flex-row items-center justify-center">
+          <div class="w-12 h-12">
+            <img
+              class="w-full h-full rounded-[4px]"
+              src="./images/image-product-1-thumbnail.jpg"
+              alt=""
+            />
+          </div>
+          <div class="ml-4 flex flex-col items-start justify-center space-y-1">
+            <p>Fall Limited Edition Sneakers</p>
+            <p>
+              $125.00 x 3
+              <span class="inline-block ml-1 font-bold">$375.00</span>
+            </p>
+          </div>
+          <button class="ml-5">
+            <img
+              class="hover:saturate-[100%] hover:brightness-[0%]"
+              src="./images/icon-delete.svg"
+              alt=""
+            />
+          </button>
+        </div>
+        <button
+          class="flex justify-center items-center bg-orange p-4 rounded-lg hover:opacity-60 text-white w-full mt-6"
+        >
+          Checkout
+        </button>
+      </div> -->
     </div>
 
     <!-- <div class="attribution">
