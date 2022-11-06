@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .list-item {
+    @apply ml-7 border-2 border-transparent hover:border-b-orange hover:border-b-2 h-full;
+  }
+
+  .link {
+    @apply inline-block mt-11;
+  }
+
+  .active {
+    @apply border-orange rounded-2xl;
+  }
+
+  .modal {
+    @apply before:content-[''] before:absolute before:left-0 before:right-0 before:h-screen before:w-screen before:bg-black/75 before:z-10;
+  }
+
+  .cart-active {
+    @apply saturate-[100%] brightness-[0%];
+  }
+}
