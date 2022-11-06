@@ -1088,6 +1088,11 @@ video {
   color: rgb(104 112 125 / var(--tw-text-opacity));
 }
 
+.text-verydarkblue {
+  --tw-text-opacity: 1;
+  color: rgb(29 32 37 / var(--tw-text-opacity));
+}
+
 .line-through {
   text-decoration-line: line-through;
 }
