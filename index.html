@@ -32,274 +32,333 @@
     </style>
   </head>
   <body class="relative w-screen h-screen font-kumbh">
-    <header class="max-w-[1110px] mx-auto">
-      <nav
-        class="h-[113px] w-full flex flex-row justify-between border-b-2 border-b-lightgrayishblue"
-      >
-        <div class="flex flex-row justify-center items-center">
-          <img class="w-auto h-5" src="./images/logo.svg" alt="Logo" />
-          <ul class="flex flex-row ml-11 items-center justify-center h-full">
-            <li class="ml-3 list-item">
-              <a href="#" class="link">Collections</a>
-            </li>
-            <li class="list-item"><a class="link" href="#">Men</a></li>
-            <li class="list-item"><a class="link" href="#">Women</a></li>
-            <li class="list-item"><a class="link" href="#">About</a></li>
-            <li class="list-item"><a class="link" href="#">Contact</a></li>
-          </ul>
-        </div>
-        <div class="flex flex-row space-x-11 items-center justify-center">
-          <button class="hover:saturate-[100%] hover:brightness-[0%]">
-            <img src="./images/icon-cart.svg" alt="" />
-          </button>
-          <img
-            class="inline-block w-12 h-12 border-2 border-transparent hover:border-orange rounded-full hover:cursor-pointer hover:border-2"
-            src="./images/image-avatar.png"
-            alt=""
-          />
-        </div>
-      </nav>
-    </header>
+    <div class="max-w-[1110px] h-full relative mx-auto">
+      <header class="max-w-[1110px] mx-auto">
+        <nav
+          class="h-[113px] w-full flex flex-row justify-between border-b-2 border-b-lightgrayishblue max-special:justify-center max-sm:h-16 max-md:justify-around"
+        >
+          <div class="flex flex-row justify-center items-center">
+            <button id="menu-btn" class="hidden max-md:block">
+              <img src="./images/icon-menu.svg" alt="Menu" />
+            </button>
+            <img
+              class="w-auto h-5 max-l:ml-12 max-md:ml-4"
+              src="./images/logo.svg"
+              alt="Logo"
+            />
+            <ul
+              class="flex flex-row ml-11 items-center justify-center h-full max-md:hidden"
+            >
+              <li class="ml-3 list-item">
+                <a href="#" class="link">Collections</a>
+              </li>
+              <li class="list-item"><a class="link" href="#">Men</a></li>
+              <li class="list-item"><a class="link" href="#">Women</a></li>
+              <li class="list-item"><a class="link" href="#">About</a></li>
+              <li class="list-item"><a class="link" href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div
+            class="flex flex-row space-x-11 max-special:space-x-4 items-center justify-center max-special:ml-6 max-l:mr-12 max-md:mr-0"
+          >
+            <button
+              id="cart-btn"
+              class="hover:saturate-[100%] hover:brightness-[0%]"
+            >
+              <img src="./images/icon-cart.svg" alt="" />
+            </button>
+            <img
+              class="inline-block w-12 h-12 border-2 border-transparent hover:border-orange rounded-full hover:cursor-pointer hover:border-2 max-sm:w-7 max-sm:h-7"
+              src="./images/image-avatar.png"
+              alt=""
+            />
+          </div>
+        </nav>
+      </header>
 
-    <main class="max-w-[1110px] mx-auto p-12 mt-[42px] flex space-x-16">
-      <div>
-        <div class="w-[445px] h-[445px]" id="product">
+      <main
+        class="max-w-[1110px] mx-auto p-12 mt-[42px] flex space-x-16 max-l:space-x-1 max-special:space-x-0 max-special:p-1 max-md:flex-col max-md:p-6 max-md:scale-90 max-md:mt-2 max-sm:p-0 max-sm:mt-0 max-sm:scale-100"
+      >
+        <div class="max-md:mx-auto">
+          <div
+            class="w-[445px] h-[445px] max-sm:w-[375px] max-sm:h-[300px] relative"
+            id="product"
+          >
+            <div class="hidden max-sm:block">
+              <button
+                id="mobile-next"
+                class="absolute rounded-full flex items-center justify-center top-1/2 -translate-y-1/2 right-5 z-20 bg-white w-[40px] h-[40px]"
+              >
+                <img
+                  class="hover:invert-[68%] hover:sepia-[49%] hover:saturate-[5436%] hover:hue-rotate-[348deg] hover:brightness-[101%] hover:contrast-[100%]"
+                  src="./images/icon-next.svg"
+                  alt="next"
+                />
+              </button>
+
+              <button
+                id="mobile-prev"
+                class="absolute rounded-full flex items-center justify-center top-1/2 -translate-y-1/2 left-5 z-10 bg-white w-[40px] h-[40px]"
+              >
+                <img
+                  class="hover:invert-[68%] hover:sepia-[49%] hover:saturate-[5436%] hover:hue-rotate-[348deg] hover:brightness-[101%] hover:contrast-[100%]"
+                  src="./images/icon-previous.svg"
+                  alt="previous"
+                />
+              </button>
+            </div>
+            <img
+              class="w-full h-full rounded-2xl cursor-pointer max-sm:rounded-none"
+              src="./images/image-product-1.jpg"
+              alt="Product"
+              id="product-image"
+            />
+          </div>
+          <div class="flex flex-row space-x-8 w-[445px] mt-8 max-sm:hidden">
+            <div
+              class="active transition-opacity cursor-pointer thumbnail border-2"
+            >
+              <img
+                class="rounded-xl w-[88px] h-[88px] opacity-60"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="product thumb"
+              />
+            </div>
+
+            <div
+              class="thumbnail transition-opacity hover:opacity-60 border-2 border-transparent"
+            >
+              <img
+                class="rounded-xl w-[88px] h-[88px] cursor-pointer"
+                src="./images/image-product-2-thumbnail.jpg"
+                alt="product thumb"
+              />
+            </div>
+
+            <div
+              class="thumbnail transition-opacity hover:opacity-60 border-2 border-transparent"
+            >
+              <img
+                class="rounded-xl w-[88px] h-[88px] cursor-pointer"
+                src="./images/image-product-3-thumbnail.jpg"
+                alt="product thumb"
+              />
+            </div>
+
+            <div
+              class="thumbnail transition-opacity hover:opacity-60 border-2 border-transparent"
+            >
+              <img
+                class="rounded-xl w-[88px] h-[88px] cursor-pointer"
+                src="./images/image-product-4-thumbnail.jpg"
+                alt="product thumb"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="p-16 pr-0 max-md:p-6 max-sm:py-4 max-sm:px-5">
+          <h2
+            class="text-orange text-sm font-bold tracking-wider text-left max-sm:mt-2"
+          >
+            SNEAKER COMPANY
+          </h2>
+          <h1
+            class="text-[44px] inline-block mt-3 font-bold leading-[46px] text-left max-sm:text-[28px] max-sm:leading-[30px]"
+          >
+            Fall Limited Edition Sneakers
+          </h1>
+          <p
+            class="inline-block mt-[38px] text-left max-sm:mt-[16px] max-sm:leading-[26px] max-sm:text-[15px]"
+          >
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <div class="mt-7 flex flex-row text-left">
+            <div>
+              <div class="font-bold text-3xl">$125.00</div>
+              <small class="text-base inline-block mt-2 line-through"
+                >$250.00</small
+              >
+            </div>
+            <div
+              class="bg-paleorange text-orange font-semibold h-6 ml-4 px-2 mt-2 rounded-md"
+            >
+              50%
+            </div>
+          </div>
+          <div
+            class="w-full flex flex-row items-center justify-between mt-8 space-x-4 max-l:flex-col max-sm:space-x-0 max-sm:mt-2"
+          >
+            <div
+              class="bg-lightgrayishblue flex flex-row items-center justify-center rounded-xl max-l:w-full max-l:justify-around"
+            >
+              <button
+                id="minus"
+                class="flex items-center justify-center d p-3 hover:opacity-60"
+              >
+                <img src="./images/icon-minus.svg" alt="icon-minus" />
+              </button>
+              <span
+                id="item-amount"
+                class="flex items-center justify-center font-bold px-7 py-3"
+                >0</span
+              >
+
+              <button
+                id="plus"
+                class="flex items-center justify-center p-3 hover:opacity-60"
+              >
+                <img src="./images/icon-plus.svg" alt="plus" />
+              </button>
+            </div>
+            <button
+              id="add-to-cart"
+              class="flex justify-center items-center bg-orange p-4 px-[77px] rounded-lg hover:opacity-60 shadow-2xl shadow-orange max-l:mt-4 max-l:w-full"
+            >
+              <img src="./images/icon-cart-white.svg" alt="" />
+              <p class="text-white inline-block ml-3">Add to cart</p>
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex-col items-center justify-center hidden max-sm:hidden"
+        id="modal-content"
+      >
+        <button
+          class="absolute -top-14 right-1 rounded-full flex items-center justify-center z-20"
+          id="close"
+        >
           <img
+            class="w-5 h-5 hover:invert-[68%] hover:sepia-[49%] hover:saturate-[5436%] hover:hue-rotate-[348deg] hover:brightness-[101%] hover:contrast-[100%]"
+            src="./images/icon-close.svg"
+            alt="close"
+          />
+        </button>
+
+        <button
+          id="next"
+          class="absolute rounded-full flex items-center justify-center top-56 -right-7 z-20 bg-white w-[58px] h-[58px]"
+        >
+          <img
+            class="hover:invert-[68%] hover:sepia-[49%] hover:saturate-[5436%] hover:hue-rotate-[348deg] hover:brightness-[101%] hover:contrast-[100%]"
+            src="./images/icon-next.svg"
+            alt="next"
+          />
+        </button>
+
+        <button
+          id="prev"
+          class="absolute rounded-full flex items-center justify-center top-56 -left-7 z-20 bg-white w-[58px] h-[58px]"
+        >
+          <img
+            class="hover:invert-[68%] hover:sepia-[49%] hover:saturate-[5436%] hover:hue-rotate-[348deg] hover:brightness-[101%] hover:contrast-[100%]"
+            src="./images/icon-previous.svg"
+            alt="previous"
+          />
+        </button>
+
+        <div class="w-[550px] h-[550px]">
+          <img
+            id="modal-product-image"
             class="w-full h-full rounded-2xl cursor-pointer"
             src="./images/image-product-1.jpg"
             alt="Product"
-            id="product-image"
           />
         </div>
 
-        <div class="flex flex-row space-x-8 w-[445px] mt-8">
+        <div
+          class="flex flex-row items-center justify-center space-x-8 w-[445px] mt-8"
+        >
           <div
-            class="active transition-opacity cursor-pointer thumbnail border-2"
+            class="active rounded-2xl transition-opacity border-2 modal-thumb"
           >
             <img
-              class="rounded-xl w-[88px] h-[88px] opacity-60"
+              class="rounded-xl w-[88px] h-[88px] transition-opacity cursor-pointer opacity-60"
               src="./images/image-product-1-thumbnail.jpg"
               alt="product thumb"
             />
           </div>
 
           <div
-            class="thumbnail transition-opacity hover:opacity-60 border-2 border-transparent"
+            class="rounded-2xl border-2 transition-opacity border-transparent modal-thumb"
           >
             <img
-              class="rounded-xl w-[88px] h-[88px] cursor-pointer"
+              class="rounded-xl w-[88px] h-[88px] cursor-pointer transition-opacity hover:opacity-60"
               src="./images/image-product-2-thumbnail.jpg"
               alt="product thumb"
             />
           </div>
 
           <div
-            class="thumbnail transition-opacity hover:opacity-60 border-2 border-transparent"
+            class="rounded-2xl border-2 transition-opacity border-transparent modal-thumb"
           >
             <img
-              class="rounded-xl w-[88px] h-[88px] cursor-pointer"
+              class="rounded-xl w-[88px] h-[88px] cursor-pointer transition-opacity hover:opacity-60"
               src="./images/image-product-3-thumbnail.jpg"
               alt="product thumb"
             />
           </div>
 
           <div
-            class="thumbnail transition-opacity hover:opacity-60 border-2 border-transparent"
+            class="rounded-2xl border-2 transition-opacity border-transparent modal-thumb"
           >
             <img
-              class="rounded-xl w-[88px] h-[88px] cursor-pointer"
+              class="rounded-xl w-[88px] h-[88px] cursor-pointer transition-opacity hover:opacity-60"
               src="./images/image-product-4-thumbnail.jpg"
               alt="product thumb"
             />
           </div>
         </div>
       </div>
-      <div class="p-16 pr-0">
-        <h2 class="text-orange text-sm font-bold tracking-wider text-left">
-          SNEAKER COMPANY
-        </h2>
-        <h1
-          class="text-[44px] inline-block mt-4 font-bold leading-[46px] text-left"
-        >
-          Fall Limited Edition Sneakers
-        </h1>
-        <p class="inline-block mt-[38px] text-left">
-          These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they'll withstand everything
-          the weather can offer.
-        </p>
-        <div class="mt-7 flex flex-row text-left">
-          <div>
-            <div class="font-bold text-3xl">$125.00</div>
-            <small class="text-base inline-block mt-2 line-through"
-              >$250.00</small
-            >
-          </div>
-          <div
-            class="bg-paleorange text-orange font-semibold h-6 ml-4 px-2 mt-2 rounded-md"
-          >
-            50%
-          </div>
-        </div>
+
+      <div
+        id="cart"
+        class="absolute hidden bg-white top-24 right-[-80px] flex-col shadow-2xl z-[5] max-xl:right-[10px] max-sm:top-20 rounded-lg"
+      >
+        <div class="p-5 border-b-2 border-lightgrayishblue font-bold">Cart</div>
         <div
-          class="w-full flex flex-row items-center justify-between mt-8 space-x-4"
+          id="cart-item"
+          class="px-28 py-20 flex items-center justify-center font-bold text-darkgrayishblue max-sm:text-sm"
         >
-          <div
-            class="bg-lightgrayishblue flex flex-row items-center justify-center rounded-xl"
-          >
-            <button
-              class="flex items-center justify-center d p-3 hover:opacity-60"
-            >
-              <img src="./images/icon-minus.svg" alt="icon-minus" />
-            </button>
-            <span class="flex items-center justify-center font-bold px-7 py-3"
-              >0</span
-            >
-
-            <button
-              class="flex items-center justify-center p-3 hover:opacity-60"
-            >
-              <img src="./images/icon-plus.svg" alt="plus" />
-            </button>
-          </div>
-          <button
-            class="flex justify-center items-center bg-orange p-4 px-[77px] rounded-lg hover:opacity-60 shadow-2xl shadow-orange"
-          >
-            <img class="" src="./images/icon-cart-white.svg" alt="" />
-            <p class="text-white inline-block ml-3">Add to cart</p>
-          </button>
+          Your cart is empty.
         </div>
-      </div>
-    </main>
-
-    <div
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex-col items-center justify-center hidden"
-      id="modal-content"
-    >
-      <button
-        class="absolute -top-14 right-1 rounded-full flex items-center justify-center z-20"
-        id="close"
-      >
-        <img
-          class="w-5 h-5 hover:invert-[68%] hover:sepia-[49%] hover:saturate-[5436%] hover:hue-rotate-[348deg] hover:brightness-[101%] hover:contrast-[100%]"
-          src="./images/icon-close.svg"
-          alt="close"
-        />
-      </button>
-
-      <button
-        id="next"
-        class="absolute rounded-full flex items-center justify-center top-56 -right-7 z-20 bg-white w-[58px] h-[58px]"
-      >
-        <img
-          class="hover:invert-[68%] hover:sepia-[49%] hover:saturate-[5436%] hover:hue-rotate-[348deg] hover:brightness-[101%] hover:contrast-[100%]"
-          src="./images/icon-next.svg"
-          alt="next"
-        />
-      </button>
-
-      <button
-        id="prev"
-        class="absolute rounded-full flex items-center justify-center top-56 -left-7 z-20 bg-white w-[58px] h-[58px]"
-      >
-        <img
-          class="hover:invert-[68%] hover:sepia-[49%] hover:saturate-[5436%] hover:hue-rotate-[348deg] hover:brightness-[101%] hover:contrast-[100%]"
-          src="./images/icon-previous.svg"
-          alt="previous"
-        />
-      </button>
-
-      <div class="w-[550px] h-[550px]">
-        <img
-          id="modal-product-image"
-          class="w-full h-full rounded-2xl cursor-pointer"
-          src="./images/image-product-1.jpg"
-          alt="Product"
-        />
       </div>
 
       <div
-        class="flex flex-row items-center justify-center space-x-8 w-[445px] mt-8"
+        id="menu"
+        class="z-30 hidden max-md:block absolute top-0 left-0 bg-white h-full w-[67%] -translate-x-full transition-transform"
       >
-        <div class="active rounded-2xl transition-opacity border-2 modal-thumb">
-          <img
-            class="rounded-xl w-[88px] h-[88px] transition-opacity cursor-pointer opacity-60"
-            src="./images/image-product-1-thumbnail.jpg"
-            alt="product thumb"
-          />
-        </div>
-
-        <div
-          class="rounded-2xl border-2 transition-opacity border-transparent modal-thumb"
-        >
-          <img
-            class="rounded-xl w-[88px] h-[88px] cursor-pointer transition-opacity hover:opacity-60"
-            src="./images/image-product-2-thumbnail.jpg"
-            alt="product thumb"
-          />
-        </div>
-
-        <div
-          class="rounded-2xl border-2 transition-opacity border-transparent modal-thumb"
-        >
-          <img
-            class="rounded-xl w-[88px] h-[88px] cursor-pointer transition-opacity hover:opacity-60"
-            src="./images/image-product-3-thumbnail.jpg"
-            alt="product thumb"
-          />
-        </div>
-
-        <div
-          class="rounded-2xl border-2 transition-opacity border-transparent modal-thumb"
-        >
-          <img
-            class="rounded-xl w-[88px] h-[88px] cursor-pointer transition-opacity hover:opacity-60"
-            src="./images/image-product-4-thumbnail.jpg"
-            alt="product thumb"
-          />
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="absolute bg-white top-24 right-[330px] flex flex-col shadow-2xl z-[5]"
-    >
-      <div class="p-5 border-b-2 border-lightgrayishblue font-bold">Cart</div>
-      <div
-        class="px-28 py-20 flex items-center justify-center font-bold text-darkgrayishblue"
-      >
-        Your cart is empty.
-      </div>
-      <!-- <div class="py-6 px-5">
-        <div class="flex flex-row items-center justify-center">
-          <div class="w-12 h-12">
-            <img
-              class="w-full h-full rounded-[4px]"
-              src="./images/image-product-1-thumbnail.jpg"
-              alt=""
-            />
-          </div>
-          <div class="ml-4 flex flex-col items-start justify-center space-y-1">
-            <p>Fall Limited Edition Sneakers</p>
-            <p>
-              $125.00 x 3
-              <span class="inline-block ml-1 font-bold">$375.00</span>
-            </p>
-          </div>
-          <button class="ml-5">
-            <img
-              class="hover:saturate-[100%] hover:brightness-[0%]"
-              src="./images/icon-delete.svg"
-              alt=""
-            />
-          </button>
-        </div>
         <button
-          class="flex justify-center items-center bg-orange p-4 rounded-lg hover:opacity-60 text-white w-full mt-6"
+          class="absolute top-6 left-6 rounded-full flex items-center justify-center z-20"
+          id="menu-close"
         >
-          Checkout
+          <img
+            class="w-4 h-4 hover:invert-[68%] hover:sepia-[49%] hover:saturate-[5436%] hover:hue-rotate-[348deg] hover:brightness-[101%] hover:contrast-[100%]"
+            src="./images/icon-close.svg"
+            alt="close"
+          />
         </button>
-      </div> -->
+        <div class="font-bold text-[18px] mt-20">
+          <ul class="flex flex-col">
+            <li class="p-[10px] ml-4 hover:text-orange cursor-pointer">
+              Collections
+            </li>
+            <li class="p-[10px] ml-4 hover:text-orange cursor-pointer">Men</li>
+            <li class="p-[10px] ml-4 hover:text-orange cursor-pointer">
+              Women
+            </li>
+            <li class="p-[10px] ml-4 hover:text-orange cursor-pointer">
+              About
+            </li>
+            <li class="p-[10px] ml-4 hover:text-orange cursor-pointer">
+              Contact
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- <div class="attribution">
