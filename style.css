@@ -1073,6 +1073,11 @@ video {
   color: rgb(255 125 26 / var(--tw-text-opacity));
 }
 
+.text-grayishblue {
+  --tw-text-opacity: 1;
+  color: rgb(182 188 200 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1119,6 +1124,8 @@ video {
   height: 100%;
   border-width: 2px;
   border-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(182 188 200 / var(--tw-text-opacity));
 }
 
 .list-item:hover {

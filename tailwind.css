@@ -4,7 +4,7 @@
 
 @layer utilities {
   .list-item {
-    @apply ml-7 border-2 border-transparent hover:border-b-orange hover:border-b-2 h-full;
+    @apply ml-7 border-2 border-transparent hover:border-b-orange hover:border-b-2 h-full text-grayishblue;
   }
 
   .link {
