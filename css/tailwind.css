@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --soft-red: 10deg 79% 65%;
+    --cyan: 186deg 34% 60%;
+    --dark-brown: 25deg 47% 15%;
+    --medium-brown: 28deg 10% 53%;
+    --cream: 27deg 66% 92%;
+    --very-pale-orange: 33deg 100% 98%;
+  }
+}
