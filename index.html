@@ -35,14 +35,15 @@
   <body
     class="flex flex-col items-center justify-center font-spacemono bg-lightgrayishcyan"
   >
-    <h1 class="text-darkgrayishcyan tracking-[0.4em] py-10 text-2xl">
+    <h1 class="text-verydarkcyan tracking-[0.4em] py-10 text-2xl md:mt-[116px]">
       SPLI<br />TTER
     </h1>
-    <main class="max-w-[375px] md:max-w-[1100px]">
-      <div class="bg-white p-6 rounded-3xl md:grid md:grid-cols-2">
-        <div>
+    <main class="max-w-[375px] md:min-w-[924px] md:mt-12">
+      <div class="bg-white p-6 rounded-3xl md:grid md:grid-cols-2 md:p-9">
+        <div class="md:px-2">
           <div class="p-2">
             <label for="bill" class="label">Bill</label>
+
             <div class="relative">
               <img
                 class="absolute top-1/2 -translate-y-1/2 left-5"
@@ -60,34 +61,38 @@
 
           <div class="mt-5 p-2">
             <p class="label">Select Tip %</p>
-            <div class="grid grid-cols-2 gap-4 mt-3">
+            <div
+              id="buttons"
+              class="grid grid-cols-2 gap-4 mt-3 md:gap-y-4 md:gap-x-2 md:mt-5 md:grid-cols-3"
+            >
               <button
-                class="button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
+                class="percentage-button button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
               >
                 5%
               </button>
               <button
-                class="button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
+                class="percentage-button button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
               >
                 10%
               </button>
               <button
-                class="button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
+                class="percentage-button button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
               >
                 15%
               </button>
               <button
-                class="button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
+                class="percentage-button button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
               >
                 25%
               </button>
               <button
-                class="button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
+                class="percentage-button button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
               >
                 50%
               </button>
               <input
-                class="input rounded-md focus:outline-1 focus:outline-strongcyan"
+                id="custom-tip"
+                class="input rounded-md focus:outline-1 focus:outline-strongcyan md:placeholder:text-left md:text-left md:w-[120px]"
                 type="text"
                 placeholder="Custom"
               />
@@ -110,23 +115,31 @@
           </div>
         </div>
 
-        <div class="bg-verydarkcyan text-white mt-6 p-6 pt-10 rounded-2xl">
-          <div class="flex justify-between items-center">
+        <div
+          class="bg-verydarkcyan text-white mt-6 p-6 pt-10 rounded-2xl md:ml-6 md:mt-0 md:p-10"
+        >
+          <div class="flex justify-between items-center md:mt-3">
             <div class="flex flex-col">
               <p>Tip Amount</p>
               <small class="text-grayishcyan">/ person</small>
             </div>
-            <div class="text-3xl text-strongcyan">$0</div>
+            <div id="tip-amount" class="text-3xl text-strongcyan md:text-5xl">
+              $0.00
+            </div>
           </div>
-          <div class="mt-6 flex justify-between items-center">
+          <div class="mt-6 flex justify-between items-center md:mt-12">
             <div class="flex flex-col">
               <p>Total</p>
               <small class="text-grayishcyan">/ person</small>
             </div>
-            <div class="text-3xl text-strongcyan">$0</div>
+            <div id="total" class="text-3xl text-strongcyan md:text-5xl">
+              $0.00
+            </div>
           </div>
           <button
-            class="mt-9 text-xl text-verydarkcyan bg-strongcyan w-[100%] py-[10px] rounded hover:bg-lightgrayishcyan"
+            id="reset-btn"
+            class="mt-9 text-xl text-verydarkcyan bg-strongcyan w-[100%] py-[10px] rounded hover:bg-lightgrayishcyan md:mt-32 disabled:opacity-30"
+            disabled
           >
             RESET
           </button>
@@ -140,5 +153,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
+    <script src="./script.js"></script>
   </body>
 </html>
