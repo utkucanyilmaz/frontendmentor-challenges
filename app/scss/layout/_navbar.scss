@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+
+  &__logo {
+    padding: 0;
+  }
+
+  &__links {
+    display: none;
+  }
+
+  &__buttons {
+    display: none;
+  }
+}

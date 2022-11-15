@@ -15,6 +15,10 @@ body {
   font-family: "Epilogue", sans-serif;
 }
 
+img {
+  vertical-align: bottom;
+}
+
 h1,
 h2,
 h3 {
@@ -31,6 +35,30 @@ a,
 a:visited,
 a:active {
   text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+.navbar__logo {
+  padding: 0;
+}
+.navbar__links {
+  display: none;
+}
+.navbar__buttons {
+  display: none;
+}
+
+button {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
