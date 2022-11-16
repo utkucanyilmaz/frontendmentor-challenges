@@ -1,6 +1,33 @@
+@use "../globals/" as *;
+
 button {
   background-color: transparent;
   padding: 0;
   border: none;
   cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  color: $medium-gray;
+  width: 100%;
+  padding: 0.8rem 0;
+  font-size: 0.875rem;
+}
+
+.register-btn {
+  margin-top: 0.2rem;
+  border: 1px solid $medium-gray;
+  border-radius: 0.8rem;
+}
+
+.btn:hover {
+  color: $almost-black;
+}
+
+.register-btn:hover {
+  border-color: $almost-black;
 }

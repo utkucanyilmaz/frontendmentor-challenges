@@ -1,19 +1,90 @@
-.navbar {
+@use "../globals/" as *;
+
+.nav-container {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   padding: 1.5rem 1rem;
+}
 
-  &__logo {
-    padding: 0;
-  }
-
+.navbar {
   &__links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: max(15rem, 64%);
+    padding: 4.4rem 1.25rem 0 1.5rem;
+    z-index: 20;
+    background-color: $almost-white;
     display: none;
+    flex-direction: column;
+    align-items: flex-start;
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0.78rem 0;
+        color: $medium-gray;
+        .dropdown-icon {
+          margin-left: 1rem;
+        }
+      }
+
+      a:hover {
+        color: $almost-black;
+      }
+    }
   }
 
   &__buttons {
-    display: none;
+    display: block;
+    margin-top: 0.75rem;
   }
+
+  &__dropdown {
+    display: none;
+    padding-left: 1.5rem;
+    margin-top: 0.3rem;
+
+    li {
+      a {
+        padding: 0.6875rem 0;
+        img {
+          width: 1.1rem;
+          height: auto;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  &__close-btn {
+    display: none;
+    position: fixed;
+    top: 21px;
+    right: 20px;
+    z-index: 20;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+.black-background {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.68);
+  z-index: 10;
 }
