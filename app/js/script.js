@@ -20,9 +20,9 @@ hamburgerBtn.addEventListener("click", () => {
 
 closeBtn.addEventListener("click", () => {
   navbarLinks.classList.remove("block");
-  document.body.classList.remove("black-background");
   hamburgerBtn.classList.remove("none");
   closeBtn.classList.remove("block");
+  document.body.classList.remove("black-background");
 });
 
 dropdownLinks.forEach((dropdownLink, index) => {

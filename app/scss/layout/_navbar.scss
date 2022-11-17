@@ -16,7 +16,7 @@
     height: 100vh;
     width: max(15rem, 64%);
     padding: 4.4rem 1.25rem 0 1.5rem;
-    z-index: 20;
+    z-index: 40;
     background-color: $almost-white;
     display: none;
     flex-direction: column;
@@ -67,8 +67,17 @@
     position: fixed;
     top: 21px;
     right: 20px;
-    z-index: 20;
+    z-index: 40;
   }
+}
+
+.planning {
+  margin-bottom: 0.75rem;
+}
+
+.blog {
+  margin-top: 3px;
+  margin-bottom: 0.75rem;
 }
 
 .block {
@@ -79,12 +88,62 @@
   display: none;
 }
 
-.black-background {
+.black-background::before {
+  content: "";
   height: 100vh;
   width: 100vw;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.68);
-  z-index: 10;
+  z-index: 30;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: max(1440px, 80%);
+    margin: auto;
+  }
+
+  .nav-container {
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__links {
+      display: flex;
+      position: static;
+      top: none;
+      right: none;
+      height: auto;
+      width: auto;
+      padding: 0;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    &__dropdown {
+      position: absolute;
+      top: 40px;
+    }
+
+    &__buttons {
+      display: flex;
+      margin-top: 0;
+    }
+
+    &__hamburger-btn,
+    &__close-btn {
+      display: none;
+    }
+  }
+
+  .features,
+  .company {
+    position: relative;
+  }
 }

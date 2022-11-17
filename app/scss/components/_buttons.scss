@@ -24,6 +24,24 @@ button {
   border-radius: 0.8rem;
 }
 
+.learn-more-btn {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  width: 8.5rem;
+  height: 3.0625rem;
+  border: 1px solid $almost-black;
+  border-radius: 1rem;
+  background-color: $almost-black;
+  color: $almost-white;
+  letter-spacing: -0.1px;
+}
+
+.learn-more-btn:hover {
+  background-color: $almost-white;
+}
+
 .btn:hover {
   color: $almost-black;
 }
