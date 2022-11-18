@@ -76,6 +76,69 @@
 
 @media screen and (min-width: 768px) {
   .hero-section {
-    display: none;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin-top: 2.5rem;
+    padding-left: 10.375rem;
+    padding-right: 8.125rem;
+  }
+
+  .hero {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    &-image-container {
+      height: auto;
+      margin-left: 8.125rem;
+    }
+
+    &-image {
+      width: auto;
+      height: 40rem;
+    }
+
+    &__header {
+      padding: 0;
+      font-size: 5rem;
+      margin-top: 6.4rem;
+      line-height: 1.05;
+    }
+
+    &__descp {
+      padding: 0;
+      padding-right: 3.125rem;
+      margin-top: 2.875rem;
+      font-size: 1.125rem;
+      line-height: 1.55;
+      text-align: left;
+    }
+
+    &__clients {
+      width: 100%;
+      margin-top: 5.8rem;
+      justify-content: flex-start;
+      .client:first-child {
+        margin: 1rem 1.25rem 1rem 0;
+      }
+
+      .client {
+        margin: 1rem 1.23rem;
+      }
+    }
+  }
+  .client:first-of-type {
+    width: min(114px, 70%);
+  }
+
+  .client:nth-of-type(2) {
+    width: min(73px, 70%);
+  }
+
+  .client:nth-of-type(3) {
+    width: min(90px, 70%);
+  }
+
+  .client:nth-of-type(4) {
+    width: min(82px, 70%);
   }
 }

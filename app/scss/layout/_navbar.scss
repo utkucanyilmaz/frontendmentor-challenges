@@ -108,27 +108,61 @@
   .nav-container {
     align-items: center;
     justify-content: flex-start;
+    padding: 1.5rem 2.5rem;
   }
 
   .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
     &__links {
+      .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > li {
+          &:not(:first-child) {
+            margin-left: 2.4375rem;
+          }
+        }
+      }
+
       display: flex;
       position: static;
       top: none;
       right: none;
       height: auto;
       width: auto;
+      margin-left: 4rem;
       padding: 0;
+      font-size: 0.9rem;
       flex-direction: row;
       align-items: flex-start;
+      justify-content: space-between;
+      li {
+        a {
+          .dropdown-icon {
+            margin-left: 0.3rem;
+          }
+        }
+      }
     }
 
     &__dropdown {
       position: absolute;
-      top: 40px;
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border-radius: 0.5rem;
+      top: 120%;
+      right: 0;
+      margin-top: 0;
+      padding: 1rem 1.5rem;
+      li {
+        a {
+          padding: 0.5rem 0;
+          img {
+            width: 0.9rem;
+          }
+        }
+      }
     }
 
     &__buttons {
@@ -145,5 +179,22 @@
   .features,
   .company {
     position: relative;
+  }
+
+  .company {
+    .navbar__dropdown {
+      width: 113px;
+      left: 0;
+      padding: 1rem 1rem 1.3rem 1.5rem;
+    }
+  }
+
+  .planning {
+    margin-bottom: 0;
+  }
+
+  .blog {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
