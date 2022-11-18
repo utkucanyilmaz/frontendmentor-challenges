@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5/hub/intro-section-with-dropdown-navigation-47j1kuJN1g]
-- Live Site URL: [https://utkucanyilmaz.github.io/intro-section-with-dropdown-navigation/]
+- Solution URL: [Solution](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5/hub/intro-section-with-dropdown-navigation-47j1kuJN1g)
+- Live Site URL: [Live Site](https://utkucanyilmaz.github.io/intro-section-with-dropdown-navigation/)
 
 ## My process
 
