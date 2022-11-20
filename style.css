@@ -1,8 +1,12 @@
-@font-face {
-  font-family: "Inter";
-  src: url("./assets/fonts/static/Inter-Bold.ttf"),
-    url("./assets/fonts/static/Inter-ExtraBold.ttf"),
-    url("./assets/fonts/static/Inter-Regular.ttf");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
 }
 
 /* Box sizing rules */
@@ -33,6 +37,7 @@ html:focus-within {
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 /* Set core body defaults */
@@ -40,7 +45,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -82,20 +87,32 @@ select {
 
 .container {
   width: 375px;
-  padding: 1rem;
+  padding: 16px;
   margin: auto;
+}
+
+.black-bg::before {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 13px;
+  padding-top: 12px;
   padding-bottom: 16px;
+  height: 56.3px;
 }
 
 .logo {
-  width: 45px;
+  width: 46px;
 }
 
 .logo img {
@@ -104,20 +121,188 @@ select {
 
 .mobile-toggle {
   all: unset;
+  cursor: pointer;
+  z-index: 40;
 }
 
-.mobile-toggle .block {
-  display: block;
+.menu-icon {
+  display: none;
 }
 
-.mobile-toggle .none {
+.close-icon {
   display: none;
 }
 
 .nav-list {
   display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 68.5%;
+  height: 100vh;
+  background-color: var(--off-white);
+  padding-inline: 25px;
+  padding-top: 132px;
+  z-index: 30;
+}
+
+.block {
+  display: block;
+}
+
+.nav-list > ul {
+  list-style-type: none;
+}
+
+.nav-list ul li a {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  padding-block: 16px;
+  line-height: 16px;
+  color: var(--very-dark-blue);
+}
+
+.nav-list ul li a:visited {
+  color: var(--very-dark-blue);
+}
+
+.nav-list ul li a:hover {
+  color: var(--soft-red);
 }
 
 .main-article {
   padding-block: 16px;
+}
+
+.main-article-header {
+  color: var(--very-dark-blue);
+  padding-top: 24px;
+  line-height: 1.01;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.main-article-text {
+  font-size: 15px;
+}
+
+.main-article-text > p {
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+  padding-block: 16px;
+  line-height: 1.7;
+}
+
+.read-more-btn {
+  border: none;
+  background-color: var(--soft-red);
+  color: var(--off-white);
+  font-weight: 700;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.read-more-btn:hover {
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+}
+
+.new-section {
+  background-color: var(--very-dark-blue);
+  margin-top: 48px;
+  padding-inline: 22px;
+  padding-top: 16px;
+}
+
+.new-section-header {
+  color: var(--soft-orange);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  padding-block: 2px;
+}
+
+.new-section-article {
+  padding-block: 16px;
+  padding-bottom: 32px;
+}
+
+.new-section-article:not(:last-child) {
+  border-bottom: 1px solid var(--dark-grayish-blue);
+}
+
+.new-section-article-header {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--off-white);
+  font-size: 20px;
+  letter-spacing: 0.1px;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+
+.new-section-article-header:hover {
+  color: var(--soft-orange);
+}
+
+.new-section-article-text {
+  color: var(--grayish-blue);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.top-articles {
+  margin-top: 44px;
+}
+
+.top-article {
+  display: flex;
+  padding-block: 17px;
+}
+
+.top-article-content {
+  padding-left: 25px;
+  padding-block: 4px;
+}
+
+.top-article-image {
+  width: 100px;
+  height: auto;
+}
+
+.top-article-order {
+  font-size: 31px;
+  font-weight: 700;
+  color: var(--grayish-blue);
+  line-height: 0.9;
+  padding-bottom: 10px;
+}
+
+.top-article-header {
+  color: var(--very-dark-blue);
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.top-article-header:visited {
+  color: var(--very-dark-blue);
+}
+
+.top-article-header:hover {
+  color: var(--soft-red);
+}
+
+.top-article-text {
+  color: var(--dark-grayish-blue);
+  font-size: 15px;
+  padding-top: 6px;
+  line-height: 1.6;
 }
