@@ -1,3 +1,4 @@
+import Button from "./ui/Button";
 export default function Hero() {
   return (
     <>
@@ -9,12 +10,12 @@ export default function Hero() {
           Grow your audience and build your online brand
         </p>
         <div className="mt-4 flex gap-x-4">
-          <button className="bg-white text-light-red font-semibold px-4 py-3 rounded-full leading-4 text-center h-12 hover:bg-very-light-red hover:text-white transition-colors ">
+          <Button className="px-4 bg-white text-light-red hover:bg-very-light-red hover:text-white">
             Start for Free
-          </button>
-          <button className="bg-transparent text-white border border-white font-semibold px-4 py-3 rounded-full leading-4 text-center h-12 hover:bg-white hover:text-very-light-red transition-colors ">
+          </Button>
+          <Button className="px-4 bg-transparent border border-white text-white hover:bg-white hover:text-very-light-red">
             Learn More
-          </button>
+          </Button>
         </div>
       </section>
     </>
