@@ -4,8 +4,8 @@ import Paragraph from "./ui/Paragraph";
 export default function Product() {
   return (
     <section className="container mx-auto py-24">
-      <div className="grid grid-cols-2 place-items-center">
-        <div className="relative before:bg-desktop before:bg-no-repeat before:absolute before:inset-0 before:bg-[-13.4rem] w-full h-full"></div>
+      <div className="grid grid-cols-2 place-items-center relative">
+        <div className="before:bg-desktop before:bg-no-repeat before:absolute before:top-0 before:-left-80 before:w-[974px] before:h-[768px]"></div>
         <div className="py-44 flex flex-col gap-y-14 place-content-center">
           <div className="flex flex-col gap-y-6 max-w-lg">
             <Title>Free, open, simple</Title>
