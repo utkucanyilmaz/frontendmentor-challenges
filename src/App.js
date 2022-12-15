@@ -2,6 +2,7 @@ import Header from "components/Header";
 import Hero from "components/Hero";
 import Design from "components/Design";
 import Mobile from "components/Mobile";
+import Product from "components/Product";
 
 function App() {
   return (
@@ -13,7 +14,14 @@ function App() {
         </div>
       </div>
       <Design />
-      <Mobile />
+
+      <div
+        className=" h-[400px] bg-gradient-to-r from-gr-very-dark-gray-blue to-gr-very-dark-desaturated-blue rounded-bl-[110px]
+    rounded-tr-[110px] relative before:bg-circle before:bg-no-repeat before:absolute before:inset-0 before:bg-[-13.4rem_-33rem]"
+      >
+        <Mobile />
+      </div>
+      <Product />
     </>
   );
 }

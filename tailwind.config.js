@@ -7,6 +7,7 @@ module.exports = {
         hero: "url('../src/images/illustration-editor-desktop.svg')",
         phones: "url('../src/images/illustration-phones.svg')",
         circle: "url('../src/images/bg-pattern-circles.svg')",
+        desktop: "url('../src/images/illustration-laptop-desktop.svg')",
       },
       screens: {
         sm: "375px",
