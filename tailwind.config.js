@@ -30,6 +30,21 @@ module.exports = {
         overpass: ["Overpass", "sans-serif"],
         ubuntu: ["Ubuntu", "sans-serif"],
       },
+
+      animation: {
+        "menu-open-animation": "menuOpen .5s ease-out",
+        // "menu-close-animation": "menuClose .5s ease-out",
+      },
+      keyframes: {
+        menuOpen: {
+          "0%": { opacity: "0%" },
+          "100%": { opacity: "100%" },
+        },
+        // menuClose: {
+        //   "0%": { opacity: "100%" },
+        //   "100%": { opacity: "0%" },
+        // },
+      },
     },
   },
   plugins: [],

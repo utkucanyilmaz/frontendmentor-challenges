@@ -13,7 +13,7 @@ export default function Header() {
         <nav className="flex items-center justify-center gap-x-8 text-white">
           <NavItem>Projects</NavItem>
           <NavItem>Company</NavItem>
-          <NavItem>Contact</NavItem>
+          <NavItem hasMenu={true}>Connect</NavItem>
         </nav>
       </div>
       <div className="flex gap-x-8 items-center ">
