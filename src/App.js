@@ -3,6 +3,7 @@ import Hero from "components/Hero";
 import Design from "components/Design";
 import Mobile from "components/Mobile";
 import Product from "components/Product";
+import Footer from "components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         <Mobile />
       </div>
       <Product />
+      <div className="bg-very-dark-black-blue rounded-tr-[110px] py-20">
+        <Footer />
+      </div>
     </>
   );
 }
