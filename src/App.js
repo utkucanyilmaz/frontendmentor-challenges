@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div className="h-[600px] bg-gradient-to-r from-gr-very-light-red to-gr-light-red rounded-bl-[110px] ">
-        <div className="h-full bg-[url(images/bg-pattern-intro-desktop.svg)] bg-no-repeat bg-[0]">
+        <div className="h-full bg-[url(images/bg-pattern-intro-mobile.svg)] md:bg-[url(images/bg-pattern-intro-desktop.svg)] bg-no-repeat bg-[-9rem_-20rem] md:bg-[-30rem_-80rem]">
           <Header />
           <Hero />
         </div>

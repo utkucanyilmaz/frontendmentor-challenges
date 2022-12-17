@@ -10,7 +10,6 @@ module.exports = {
         desktop: "url('../src/images/illustration-laptop-desktop.svg')",
       },
       screens: {
-        sm: "375px",
         xl: "1110px",
       },
       colors: {
