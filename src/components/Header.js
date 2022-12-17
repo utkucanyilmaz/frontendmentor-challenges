@@ -43,11 +43,11 @@ export default function Header() {
 
       {windowWidth <= 768 && (
         <button onClick={changeIcon}>
-          <img src={isOpen ? HamburgerIcon : CloseIcon} alt="" />
+          <img src={isOpen ? CloseIcon : HamburgerIcon} alt="" />
         </button>
       )}
 
-      {windowWidth <= 768 && !isOpen && (
+      {windowWidth <= 768 && isOpen && (
         <nav className="absolute top-32 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] flex flex-col items-center justify-center gap-y-6 text-very-dark-blue bg-white shadow-lg py-10 rounded-md z-10">
           <NavItem>Projects</NavItem>
           <NavItem>Company</NavItem>

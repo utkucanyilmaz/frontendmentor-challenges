@@ -2,8 +2,8 @@ import Button from "./ui/Button";
 export default function Hero() {
   return (
     <>
-      <section className="container mx-auto text-white flex flex-col text-center items-center justify-center gap-y-7 mt-24">
-        <h1 className="text-6xl font-overpass font-bold tracking-tight">
+      <section className="container mx-auto text-white flex flex-col text-center items-center justify-center gap-y-4 md:gap-y-7 mt-9 md:mt-24 px-6 md:px-0">
+        <h1 className="text-3xl md:text-6xl font-overpass font-bold tracking-tight">
           A modern publishing platform
         </h1>
         <p className="text-lg opacity-70">
