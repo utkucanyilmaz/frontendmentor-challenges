@@ -1,4 +1,4 @@
-import Job from "./components/Job";
+import Jobs from "./components/Jobs";
 import Header from "./components/Header";
 
 function App() {
@@ -6,8 +6,8 @@ function App() {
     <>
       <Header />
       <main className="bg-light-grayish-cyan h-screen">
-        <div className="container mx-auto px-40 py-20">
-          <Job />
+        <div className="container mx-auto py-20">
+          <Jobs />
         </div>
       </main>
     </>
