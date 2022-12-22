@@ -1,23 +1,28 @@
-import { useEffect } from "react";
+import { GrFormClose } from "react-icons/gr";
 
 export default function Tag({
   children,
-  filtered,
-  setFiltered,
   activeTags,
   setActiveTags,
+  isRemovable = false,
 }) {
+  function collectActives() {
+    if (!activeTags.includes(children)) {
+      setActiveTags([...activeTags, children]);
+    }
+  }
   return (
-    <a
-      onClick={() => {
-        if (!activeTags.includes(children)) {
-          setActiveTags([...activeTags, children]);
-        }
-      }}
-      href="#"
-      className="p-2 bg-light-grayish-cyan-filter text-desaturated-dark-cyan rounded hover:bg-desaturated-dark-cyan hover:text-white cursor-pointer"
+    <button
+      className="p-2 font-league-spartan bg-light-grayish-cyan-filter text-desaturated-dark-cyan rounded hover:bg-desaturated-dark-cyan hover:text-white cursor-pointer flex items-center"
+      onClick={collectActives}
     >
       {children}
-    </a>
+
+      {isRemovable && (
+        <div className="">
+          <GrFormClose />
+        </div>
+      )}
+    </button>
   );
 }
