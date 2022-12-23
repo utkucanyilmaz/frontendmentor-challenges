@@ -1,7 +1,7 @@
 import Tag from "./Tag";
 
 export default function TagBar({ activeTags, setActiveTags }) {
-  function clearActives() {
+  function clearTags() {
     setActiveTags([]);
   }
   return (
@@ -14,7 +14,7 @@ export default function TagBar({ activeTags, setActiveTags }) {
         ))}
       </div>
       <button
-        onClick={clearActives}
+        onClick={clearTags}
         className="p-4 text-desaturated-dark-cyan font-league-spartan hover:underline"
       >
         Clear

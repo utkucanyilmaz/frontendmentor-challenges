@@ -82,6 +82,17 @@ export default function Job({
           >
             {language}
           </Tag>
+        ))}{" "}
+        {advert.tools.map((tool, key) => (
+          <Tag
+            key={key}
+            data={data}
+            setFiltered={setFiltered}
+            activeTags={activeTags}
+            setActiveTags={setActiveTags}
+          >
+            {tool}
+          </Tag>
         ))}
       </div>
     </div>
