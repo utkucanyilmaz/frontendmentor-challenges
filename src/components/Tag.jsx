@@ -1,12 +1,11 @@
-import { GrFormClose } from "react-icons/gr";
 import { RxCross2 } from "react-icons/rx";
-import removeIcon from "../assets/images/icon-remove.svg";
 
 export default function Tag({
   children,
   activeTags,
   setActiveTags,
   isRemovable = false,
+  test,
 }) {
   function addActiveTags() {
     if (!activeTags.includes(children)) {
@@ -14,10 +13,12 @@ export default function Tag({
     }
   }
 
-  function removeTag() {}
+  function removeTag() {
+    setActiveTags(prev => prev.filter((_, index) => index !== test));
+  }
 
   return (
-    <div onClick={removeTag} className="flex">
+    <div name={children} className="flex">
       <button
         className={`py-1 px-2 font-league-spartan bg-light-grayish-cyan-filter text-desaturated-dark-cyan rounded-tl rounded-bl flex items-center ${
           !isRemovable
@@ -30,8 +31,11 @@ export default function Tag({
         {children}
       </button>
       {isRemovable && (
-        <button className="flex items-center justify-center bg-very-dark-grayish-cyan rounded-tr rounded-br h-8 w-8 cursor-pointer">
-          <RxCross2 color="#fff" />
+        <button
+          onClick={removeTag}
+          className="flex items-center justify-center bg-desaturated-dark-cyan hover:bg-very-dark-grayish-cyan rounded-tr rounded-br h-8 w-8 cursor-pointer"
+        >
+          <RxCross2 color="#fff" size={20} />
         </button>
       )}
     </div>

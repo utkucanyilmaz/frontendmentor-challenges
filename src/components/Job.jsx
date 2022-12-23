@@ -1,12 +1,6 @@
 import Tag from "./Tag";
 
-export default function Job({
-  advert,
-  data,
-  setFiltered,
-  activeTags,
-  setActiveTags,
-}) {
+export default function Job({ advert, data, activeTags, setActiveTags }) {
   return (
     <div
       key={advert.id}
@@ -55,7 +49,6 @@ export default function Job({
         {
           <Tag
             data={data}
-            setFiltered={setFiltered}
             activeTags={activeTags}
             setActiveTags={setActiveTags}
           >
@@ -65,7 +58,6 @@ export default function Job({
         {
           <Tag
             data={data}
-            setFiltered={setFiltered}
             activeTags={activeTags}
             setActiveTags={setActiveTags}
           >
@@ -76,7 +68,6 @@ export default function Job({
           <Tag
             key={key}
             data={data}
-            setFiltered={setFiltered}
             activeTags={activeTags}
             setActiveTags={setActiveTags}
           >
@@ -87,7 +78,6 @@ export default function Job({
           <Tag
             key={key}
             data={data}
-            setFiltered={setFiltered}
             activeTags={activeTags}
             setActiveTags={setActiveTags}
           >

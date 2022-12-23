@@ -8,14 +8,20 @@ export default function TagBar({ activeTags, setActiveTags }) {
     <div className="w-full shadow-lg absolute bottom-0 translate-y-1/2 bg-white px-10 py-5 flex items-center justify-between rounded-md">
       <div className="flex flex-wrap gap-4">
         {activeTags.map((tag, key) => (
-          <Tag isRemovable={true} key={key}>
+          <Tag
+            setActiveTags={setActiveTags}
+            activeTags={activeTags}
+            isRemovable={true}
+            key={key}
+            test={key}
+          >
             {tag}
           </Tag>
         ))}
       </div>
       <button
         onClick={clearTags}
-        className="p-4 text-desaturated-dark-cyan font-league-spartan hover:underline"
+        className="p-4 text-dark-grayish-cyan font-semibold hover:text-desaturated-dark-cyan font-league-spartan hover:underline"
       >
         Clear
       </button>
