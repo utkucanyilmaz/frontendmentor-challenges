@@ -1,6 +1,7 @@
 import Job from "./Job";
 import { useState, useEffect } from "react";
 import jobData from "../assets/data.json";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Jobs({ activeTags, setActiveTags }) {
   const [data, setData] = useState([]);
@@ -20,20 +21,22 @@ export default function Jobs({ activeTags, setActiveTags }) {
   }
 
   return (
-    <div className="grid grid-cols-1 gap-y-6">
-      {data
-        .filter(tag => filterTags(tag))
-        .map(advert => {
-          return (
-            <Job
-              advert={advert}
-              key={advert.id}
-              data={data}
-              activeTags={activeTags}
-              setActiveTags={setActiveTags}
-            />
-          );
-        })}
-    </div>
+    <motion.div layout className="grid grid-cols-1 gap-y-8 md:gap-y-6">
+      <AnimatePresence>
+        {data
+          .filter(tag => filterTags(tag))
+          .map(advert => {
+            return (
+              <Job
+                advert={advert}
+                key={advert.id}
+                data={data}
+                activeTags={activeTags}
+                setActiveTags={setActiveTags}
+              />
+            );
+          })}
+      </AnimatePresence>
+    </motion.div>
   );
 }

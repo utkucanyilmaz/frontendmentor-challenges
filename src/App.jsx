@@ -8,10 +8,8 @@ function App() {
   return (
     <>
       <Header activeTags={activeTags} setActiveTags={setActiveTags} />
-      <main className="bg-light-grayish-cyan h-screen">
-        <div className="container mx-auto py-20">
-          <Jobs activeTags={activeTags} setActiveTags={setActiveTags} />
-        </div>
+      <main className="container mx-auto py-20 px-4">
+        <Jobs activeTags={activeTags} setActiveTags={setActiveTags} />
       </main>
     </>
   );

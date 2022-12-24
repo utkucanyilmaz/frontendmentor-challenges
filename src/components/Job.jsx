@@ -1,18 +1,23 @@
 import Tag from "./Tag";
+import { motion } from "framer-motion";
 
 export default function Job({ advert, data, activeTags, setActiveTags }) {
   return (
-    <div
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      layout
       key={advert.id}
-      className={`flex justify-between font-league-spartan bg-white px-9 py-8  rounded-md shadow-md ${
-        advert.featured ? "border-desaturated-dark-cyan border-l-4" : ""
+      className={`grid grid-cols-1 md:grid-cols-2 relative  font-league-spartan bg-white px-4 md:px-6 py-8 md:py-6 rounded-md shadow-md md:gap-x-4 border-l-4  ${
+        advert.featured ? "border-desaturated-dark-cyan" : "border-transparent"
       }`}
     >
       <div className="flex items-center gap-x-6">
-        <div className="w-20 h-20 flex items-center justify-center">
-          <img className="w-full h-full" src={advert.logo} alt="" />
+        <div className="w-12 h-12 absolute top-0 -translate-y-1/2 md:static md:translate-y-0 md:w-20 md:h-20 flex items-center justify-center">
+          <img className="" src={advert.logo} alt="" />
         </div>
-        <div>
+        <div className="w-full">
           <div className="flex items-center justify-start gap-x-4 py-1">
             <div className="text-desaturated-dark-cyan text-sm font-bold">
               {advert.company}
@@ -36,7 +41,7 @@ export default function Job({ advert, data, activeTags, setActiveTags }) {
           >
             {advert.position}
           </a>
-          <div className="flex items-center gap-x-4 text-sm text-dark-grayish-cyan">
+          <div className="flex py-4 border-b w-full md:border-none md:py-0 items-center gap-x-4 text-sm text-dark-grayish-cyan">
             <div>{advert.postedAt}</div>
             &#x2022;
             <div>{advert.contract}</div>
@@ -45,7 +50,7 @@ export default function Job({ advert, data, activeTags, setActiveTags }) {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center gap-4 px-1 flex-wrap">
+      <div className="flex justify-start lg:justify-end items-center gap-4 py-4 flex-wrap ">
         {
           <Tag
             data={data}
@@ -73,7 +78,7 @@ export default function Job({ advert, data, activeTags, setActiveTags }) {
           >
             {language}
           </Tag>
-        ))}{" "}
+        ))}
         {advert.tools.map((tool, key) => (
           <Tag
             key={key}
@@ -85,6 +90,6 @@ export default function Job({ advert, data, activeTags, setActiveTags }) {
           </Tag>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

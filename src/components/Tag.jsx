@@ -1,4 +1,5 @@
 import { RxCross2 } from "react-icons/rx";
+import { motion } from "framer-motion";
 
 export default function Tag({
   children,
@@ -18,7 +19,13 @@ export default function Tag({
   }
 
   return (
-    <div name={children} className="flex">
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      name={children}
+      className="flex"
+    >
       <button
         className={`py-1 px-2 font-league-spartan bg-light-grayish-cyan-filter text-desaturated-dark-cyan rounded-tl rounded-bl flex items-center ${
           !isRemovable
@@ -38,6 +45,6 @@ export default function Tag({
           <RxCross2 color="#fff" size={20} />
         </button>
       )}
-    </div>
+    </motion.div>
   );
 }

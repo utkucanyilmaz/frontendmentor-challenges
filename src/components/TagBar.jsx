@@ -1,23 +1,32 @@
 import Tag from "./Tag";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function TagBar({ activeTags, setActiveTags }) {
   function clearTags() {
     setActiveTags([]);
   }
   return (
-    <div className="w-full shadow-lg absolute bottom-0 translate-y-1/2 bg-white px-10 py-5 flex items-center justify-between rounded-md">
+    <motion.div
+      layout
+      animate={{ opacity: 1, y: 50 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      className="w-[calc(100%-2rem)] shadow-lg absolute bottom-0 bg-white px-4 md:px-10 py-5 flex items-center justify-between rounded-md"
+    >
       <div className="flex flex-wrap gap-4">
-        {activeTags.map((tag, key) => (
-          <Tag
-            setActiveTags={setActiveTags}
-            activeTags={activeTags}
-            isRemovable={true}
-            key={key}
-            test={key}
-          >
-            {tag}
-          </Tag>
-        ))}
+        <AnimatePresence>
+          {activeTags.map((tag, key) => (
+            <Tag
+              setActiveTags={setActiveTags}
+              activeTags={activeTags}
+              isRemovable={true}
+              key={key}
+              test={key}
+            >
+              {tag}
+            </Tag>
+          ))}
+        </AnimatePresence>
       </div>
       <button
         onClick={clearTags}
@@ -25,6 +34,6 @@ export default function TagBar({ activeTags, setActiveTags }) {
       >
         Clear
       </button>
-    </div>
+    </motion.div>
   );
 }
