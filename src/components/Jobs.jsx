@@ -1,6 +1,6 @@
 import Job from "./Job";
 import { useState, useEffect } from "react";
-import jobData from "../assets/data.json";
+import jobData from "/src/data.json";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Jobs({ activeTags, setActiveTags }) {

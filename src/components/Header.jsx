@@ -1,6 +1,6 @@
 import TagBar from "./TagBar";
-import desktopBg from "../assets/images/bg-header-desktop.svg";
-import mobileBg from "../assets/images/bg-header-mobile.svg";
+import desktopBg from "/assets/images/bg-header-desktop.svg";
+import mobileBg from "/assets/images/bg-header-mobile.svg";
 
 export default function Header({ activeTags, setActiveTags }) {
   return (
