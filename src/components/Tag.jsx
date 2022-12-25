@@ -23,7 +23,6 @@ export default function Tag({
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
-      name={children}
       className="flex"
     >
       <button
