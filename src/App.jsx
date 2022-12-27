@@ -1,5 +1,11 @@
+import User from "./components/User";
+
 function App() {
-  return <div className="bg-gray-300">Hello</div>;
+  return (
+    <section>
+      <User />
+    </section>
+  );
 }
 
 export default App;
