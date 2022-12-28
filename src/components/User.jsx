@@ -2,7 +2,7 @@ import Button from "./Button";
 
 export default function User() {
   return (
-    <div className="bg-neutral-dark-blue rounded-2xl">
+    <div className="bg-neutral-dark-blue rounded-2xl row-span-2">
       <div className="bg-primary-blue px-8 pt-8 py-24 flex flex-col gap-y-12 rounded-2xl">
         <img
           className="border-4 border-white rounded-full h-24 w-24"
