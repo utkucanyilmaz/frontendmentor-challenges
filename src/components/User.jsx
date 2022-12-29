@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-export default function User() {
+export default function User({ timeframe, setTimeFrame }) {
   return (
     <div className="bg-neutral-dark-blue rounded-2xl row-span-2">
       <div className="bg-primary-blue px-8 pt-8 py-24 flex flex-col gap-y-12 rounded-2xl">
@@ -18,9 +18,15 @@ export default function User() {
         </div>
       </div>
       <div className="flex flex-col items-start justify-center bg-neutral-dark-blue px-8 pb-8 pt-6 rounded-2xl gap-y-6">
-        <Button>Daily</Button>
-        <Button>Weekly</Button>
-        <Button>Monthly</Button>
+        <Button timeframe={timeframe} setTimeFrame={setTimeFrame}>
+          Daily
+        </Button>
+        <Button timeframe={timeframe} setTimeFrame={setTimeFrame}>
+          Weekly
+        </Button>
+        <Button timeframe={timeframe} setTimeFrame={setTimeFrame}>
+          Monthly
+        </Button>
       </div>
     </div>
   );
