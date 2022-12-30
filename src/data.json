@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Work",
     "bg": "bg-primary-light-orange",
-    "bgImage": "./assets/images/icon-work.svg",
+    "bgImage": "/assets/images/icon-work.svg",
     "timeframes": {
       "daily": {
         "current": 5,
@@ -23,7 +23,7 @@
     "id": 2,
     "title": "Play",
     "bg": "bg-primary-soft-blue",
-    "bgImage": "./assets/images/icon-play.svg",
+    "bgImage": "/assets/images/icon-play.svg",
     "timeframes": {
       "daily": {
         "current": 1,

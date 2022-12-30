@@ -2,22 +2,23 @@ import Button from "./Button";
 
 export default function User({ timeframe, setTimeFrame }) {
   return (
-    <div className="bg-neutral-dark-blue rounded-2xl row-span-2">
-      <div className="bg-primary-blue px-8 pt-8 py-24 flex flex-col gap-y-12 rounded-2xl">
+    <div className="bg-neutral-dark-blue rounded-2xl lg:row-span-2 sm:col-span-2 lg:col-span-1">
+      <div className="bg-primary-blue p-8 lg:pb-24 flex flex-row items-center lg:items-start lg:flex-col gap-x-4 lg:gap-y-12 rounded-2xl">
         <img
-          className="border-4 border-white rounded-full h-24 w-24"
+          className="border-4 border-white rounded-full h-[70px] w-[70px] lg:h-24 lg:w-24"
           src="/assets/images/image-jeremy.png"
           alt=""
         />
         <div className="flex flex-col gap-y-1">
-          <p className="text-neutral-pale-blue text-lg">Report for</p>
-          <p className="text-white text-[44px] leading-[3rem]  font-light">
-            Jeremy <br />
-            Robson
+          <p className="text-neutral-pale-blue text-base lg:text-lg">
+            Report for
+          </p>
+          <p className="text-white text-2xl lg:text-[44px] lg:leading-[3rem]  font-light">
+            Jeremy Robson
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-start justify-center bg-neutral-dark-blue px-8 pb-8 pt-6 rounded-2xl gap-y-6">
+      <div className="flex flex-row lg:flex-col items-start justify-around lg:justify-center bg-neutral-dark-blue p-5 lg:p-8 rounded-2xl gap-y-6">
         <Button timeframe={timeframe} setTimeFrame={setTimeFrame}>
           Daily
         </Button>
