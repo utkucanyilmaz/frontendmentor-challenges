@@ -15,7 +15,7 @@ function App() {
   };
 
   const getData = () => {
-    fetch("/src/data.json")
+    fetch("/data.json")
       .then(res => {
         return res.json();
       })
