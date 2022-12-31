@@ -24,8 +24,8 @@ export default function Card({
             </button>
           </div>
           <div className="flex flex-row justify-between items-center lg:items-start lg:flex-col gap-y-6">
-            <p className="text-4xl sm:text-3xl font-thin lg:text-6xl">{`${current}hrs`}</p>
-            <p className="text-base font-thin lg:text-lg text-neutral-pale-blue">{`Last ${typeOfLast} - ${prev}hrs`}</p>
+            <p className="text-4xl sm:text-3xl font-thin lg:text-5xl xl:text-6xl">{`${current}hrs`}</p>
+            <p className="text-base font-thin lg:text-md xl:text-lg text-neutral-pale-blue">{`Last ${typeOfLast} - ${prev}hrs`}</p>
           </div>
         </div>
       </div>

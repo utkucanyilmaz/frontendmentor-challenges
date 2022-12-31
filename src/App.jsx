@@ -6,6 +6,14 @@ function App() {
   const [data, setData] = useState([]);
   const [timeframe, setTimeFrame] = useState("daily");
 
+  const changeTypeOfLast = () => {
+    return timeframe === "daily"
+      ? "Day"
+      : timeframe === "weekly"
+      ? "Week"
+      : "Month";
+  };
+
   const getData = () => {
     fetch("/src/data.json")
       .then(res => {
@@ -31,13 +39,7 @@ function App() {
               bg={card.bg}
               bgImage={card.bgImage}
               title={card.title}
-              typeOfLast={
-                timeframe === "daily"
-                  ? "Day"
-                  : timeframe === "weekly"
-                  ? "Week"
-                  : "Month"
-              }
+              typeOfLast={changeTypeOfLast()}
               current={
                 timeframe === "daily"
                   ? card.timeframes.daily.current
