@@ -11,7 +11,7 @@ function DropdownMenu() {
 
   return (
     <select
-      className="h-14 w-[200px] cursor-pointer rounded bg-neutral-dark-blue-500 px-6 text-white "
+      className="h-14 w-[200px] cursor-pointer rounded bg-neutral-dark-blue-500 px-6 text-sm text-white"
       name="region"
     >
       {options}
