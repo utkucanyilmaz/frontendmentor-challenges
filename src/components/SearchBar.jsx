@@ -3,7 +3,7 @@ import { FaSearch, FaTimes } from "react-icons/fa";
 
 function SearchBar() {
   return (
-    <div className="relative mt-10 ml-10 flex h-14 w-[480px] items-center text-white">
+    <div className="relative flex h-14 w-[480px] items-center text-white">
       <label className="absolute left-6" htmlFor="search-bar">
         <FaSearch />
       </label>
@@ -11,7 +11,7 @@ function SearchBar() {
         id="search-bar"
         type="text"
         placeholder="Search for a country..."
-        className="h-full w-full rounded-md bg-neutral-dark-blue-500 py-4 pl-16 text-sm caret-white placeholder:text-white focus:placeholder:text-transparent"
+        className="h-full w-full rounded bg-neutral-dark-blue-500 py-4 pl-16 text-sm caret-white placeholder:text-white focus:placeholder:text-transparent"
       />
 
       <button className="absolute right-3 p-1">
