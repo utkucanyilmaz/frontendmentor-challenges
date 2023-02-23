@@ -8,7 +8,7 @@ function CountryCard({ flagSrc, name, population, region, capital }) {
       href="#"
       className="flex max-w-max cursor-pointer flex-col gap-y-8 overflow-hidden rounded bg-neutral-dark-blue-500 text-sm hover:bg-opacity-70"
     >
-      <div className="flex h-40 w-64 items-center justify-start">
+      <div className="flex h-40 w-72 items-center justify-start sm:w-64">
         <img
           src={flagSrc}
           alt={`${name} Flag`}

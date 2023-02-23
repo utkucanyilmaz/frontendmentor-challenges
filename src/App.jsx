@@ -1,15 +1,15 @@
-import DropdownMenu from "./components/DropdownMenu";
 import Header from "./components/Header";
-import SearchBar from "./components/SearchBar";
 import CountryBoard from "./components/CountryBoard";
+import FilteringSection from "./components/FilteringSection";
 
 function App() {
   return (
-    <div className="bg-neutral-dark-blue-700 font-nunito">
+    <div className="flex flex-col gap-y-8">
       <Header />
-      <SearchBar />
-      <DropdownMenu />
-      <CountryBoard />
+      <div className="container mx-auto ">
+        <FilteringSection />
+        <CountryBoard />
+      </div>
     </div>
   );
 }
