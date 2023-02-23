@@ -7,3 +7,7 @@
 #root {
   @apply bg-neutral-dark-blue-700 font-nunito;
 }
+
+.country-card {
+  @apply flex max-w-max cursor-pointer flex-col gap-y-8 overflow-hidden rounded bg-neutral-dark-blue-500 text-sm hover:bg-opacity-70;
+}
