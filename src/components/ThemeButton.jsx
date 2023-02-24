@@ -13,8 +13,8 @@ function ThemeButton({ theme, setTheme }) {
       onClick={handleTheme}
       className="group flex items-center gap-x-2 p-1 text-sm sm:gap-x-3 sm:text-base"
     >
-      <FaMoon className="text-neutral-dark-blue-800 transition-colors group-hover:text-gray-400 dark:text-white" />
-      <div className="text-neutral-dark-blue-800 transition-colors group-hover:text-gray-400 dark:text-white">
+      <FaMoon className="text-neutral-dark-blue-800 transition-colors group-hover:text-gray-400 dark:text-white " />
+      <div className="text-neutral-dark-blue-800  transition-colors group-hover:text-gray-400 dark:text-white ">
         Dark Mode
       </div>
     </button>
