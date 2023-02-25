@@ -1,7 +1,10 @@
 import React from "react";
 import { FaMoon } from "react-icons/fa";
+import { useTheme } from "../context/ThemeContext";
 
-function ThemeButton({ theme, setTheme }) {
+function ThemeButton() {
+  const { theme, setTheme } = useTheme();
+
   const handleTheme = () => {
     const themeValue = theme === "dark" ? "light" : "dark";
     setTheme(themeValue);
