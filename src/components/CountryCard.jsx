@@ -1,6 +1,6 @@
 import React from "react";
 
-function CountryCard({ flagSrc, name, population, region, capital }) {
+function CountryCard({ flagSrc, name, population, region, capital, alt }) {
   const formattedPopulation = new Intl.NumberFormat().format(population);
 
   return (
@@ -8,7 +8,7 @@ function CountryCard({ flagSrc, name, population, region, capital }) {
       <div className="flex h-40 w-72 items-center justify-start sm:w-64">
         <img
           src={flagSrc}
-          alt={`${name} Flag`}
+          alt={alt}
           className="aspect-video h-full w-full overflow-hidden"
         />
       </div>

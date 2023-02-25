@@ -5,7 +5,9 @@ import CountryCard from "./CountryCard";
 function CountryBoard() {
   const getCountries = async () => {
     try {
-      const { data } = await axios.get("https://restcountries.com/v3.1/all");
+      const { data } = await axios.get(
+        "https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital"
+      );
       return data;
     } catch (e) {
       console.log(e);
@@ -26,7 +28,7 @@ function CountryBoard() {
       {countries.map(
         (
           {
-            flags: { png: flag },
+            flags: { png: flag, alt },
             name: { common },
             population,
             region,
@@ -41,6 +43,7 @@ function CountryBoard() {
             population={population}
             region={region}
             capital={capital}
+            alt={alt}
           />
         )
       )}
