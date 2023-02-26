@@ -1,27 +1,8 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useFilter } from "../context/FilterContext";
 import CountryCard from "./CountryCard";
 
 function CountryBoard() {
-  const getCountries = async () => {
-    try {
-      const { data } = await axios.get(
-        "https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital"
-      );
-      return data;
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
-  const [countries, setCountries] = useState(null);
-
-  useEffect(() => {
-    (async () => {
-      const countriesData = await getCountries();
-      setCountries(countriesData);
-    })();
-  }, []);
+  const { countries } = useFilter();
 
   return countries ? (
     <section className="container mx-auto grid grid-cols-1 place-items-center gap-8 py-4 sm:grid-cols-2 sm:gap-y-10 sm:py-10 lg:grid-cols-3 lg:gap-16 lg:py-12 xl:grid-cols-4 2xl:grid-cols-5">
