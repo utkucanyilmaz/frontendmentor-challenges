@@ -14,6 +14,11 @@ const FilterProvider = ({ children }) => {
     setRegionVal,
   };
 
+  const orderedCountries = (countries = []) =>
+    countries.sort((firstCountry, secondCountry) => {
+      return firstCountry.name.common.localeCompare(secondCountry.name.common);
+    });
+
   useEffect(() => {
     (async () => {
       let countriesByRegion;
@@ -28,7 +33,7 @@ const FilterProvider = ({ children }) => {
       const { data } = await axios.get(
         "https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital"
       );
-      return data;
+      return orderedCountries(data);
     } catch (e) {
       console.log(e);
     }
@@ -39,7 +44,7 @@ const FilterProvider = ({ children }) => {
       const { data } = await axios.get(
         `https://restcountries.com/v3.1/region/${regionVal.toLowerCase()}?fields=name,flags,population,region,capital`
       );
-      return data;
+      return orderedCountries(data);
     } catch (e) {
       console.log(e);
     }
