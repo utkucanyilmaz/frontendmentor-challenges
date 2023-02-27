@@ -6,12 +6,15 @@ const FilterContext = createContext();
 const FilterProvider = ({ children }) => {
   const [countries, setCountries] = useState(null);
   const [regionVal, setRegionVal] = useState("All");
+  const [filtered, setFiltered] = useState(null);
 
   const values = {
     countries,
     setCountries,
     regionVal,
     setRegionVal,
+    filtered,
+    setFiltered,
   };
 
   const orderedCountries = (countries = []) =>
@@ -25,6 +28,7 @@ const FilterProvider = ({ children }) => {
       if (regionVal === "All") countriesByRegion = await getAllCountries();
       else countriesByRegion = await getCountriesByRegion();
       setCountries(countriesByRegion);
+      setFiltered(countriesByRegion);
     })();
   }, [regionVal]);
 
