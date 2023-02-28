@@ -5,10 +5,14 @@ import "./index.css";
 import { ThemeProvider } from "./context/ThemeContext";
 import { FilterProvider } from "./context/FilterContext";
 
+import { BrowserRouter } from "react-router-dom";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <ThemeProvider>
-    <FilterProvider>
-      <App />
-    </FilterProvider>
-  </ThemeProvider>
+  <BrowserRouter>
+    <ThemeProvider>
+      <FilterProvider>
+        <App />
+      </FilterProvider>
+    </ThemeProvider>
+  </BrowserRouter>
 );

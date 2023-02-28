@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function CountryCard({ flagSrc, name, population, region, capital, alt }) {
   const formattedPopulation = new Intl.NumberFormat().format(population);
 
   return (
-    <a href="#" className="country-card">
+    <Link to={`/${name.toLowerCase()}`} className="country-card">
       <div className="flex h-40 w-72 items-center justify-start sm:w-64">
         <img
           src={flagSrc}
@@ -28,7 +29,7 @@ function CountryCard({ flagSrc, name, population, region, capital, alt }) {
           {capital}
         </p>
       </div>
-    </a>
+    </Link>
   );
 }
 

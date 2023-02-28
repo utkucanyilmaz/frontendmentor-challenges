@@ -1,6 +1,8 @@
+import { Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header";
-import CountryBoard from "./components/CountryBoard";
-import FilteringSection from "./components/FilteringSection";
+import Home from "./pages/Home";
+import CountryDetail from "./pages/CountryDetail";
 
 import { useTheme } from "./context/ThemeContext";
 
@@ -12,8 +14,10 @@ function App() {
       <div className="flex min-h-screen flex-col gap-y-8 bg-neutral-gray-100 font-nunito dark:bg-neutral-dark-blue-700">
         <Header />
         <div className="container mx-auto">
-          <FilteringSection />
-          <CountryBoard />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/:country" element={<CountryDetail />} />
+          </Routes>
         </div>
       </div>
     </div>
