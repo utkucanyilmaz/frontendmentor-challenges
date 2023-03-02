@@ -16,7 +16,7 @@ function CountryDetail() {
     (async function getCountryData() {
       try {
         const { data } = await axios(
-          `https://restcountries.com/v3.1/name/${country_name}`
+          `https://restcountries.com/v3.1/name/${country_name}?fullText=true`
         );
         setLoading(false);
         setCountry(data[0]);
