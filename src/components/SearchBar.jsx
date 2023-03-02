@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { FaSearch, FaTimes } from "react-icons/fa";
 import { useFilter } from "../context/FilterContext";
 
@@ -13,7 +13,8 @@ function SearchBar() {
         country.name.common
           .toString()
           .toLowerCase()
-          .includes(target.value.toString().toLowerCase())
+          .trim()
+          .includes(target.value.toString().toLowerCase().trim())
       )
     );
   };
