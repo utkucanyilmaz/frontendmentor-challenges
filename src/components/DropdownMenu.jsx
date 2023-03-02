@@ -3,7 +3,7 @@ import { useFilter } from "../context/FilterContext";
 const regions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
 
 function DropdownMenu() {
-  const { setRegionVal } = useFilter();
+  const { regionVal, setRegionVal } = useFilter();
 
   const options = regions.map((region, index) => (
     <option value={region} key={index}>
@@ -20,6 +20,7 @@ function DropdownMenu() {
       className="ml-4 h-14 w-[calc(50%-2rem)] cursor-pointer rounded bg-white px-6 text-sm text-neutral-dark-blue-800 shadow-md dark:bg-neutral-dark-blue-500 dark:text-white md:w-[200px]"
       name="region"
       onChange={handleChange}
+      value={regionVal}
     >
       {options}
     </select>
