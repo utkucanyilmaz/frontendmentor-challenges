@@ -33,6 +33,7 @@ function SearchBar() {
         ref={searchBar}
         id="search-bar"
         type="text"
+        autoComplete="off"
         onChange={handleChange}
         placeholder="Search for a country..."
         className="h-full w-full rounded bg-white py-4 pl-12 text-sm caret-neutral-dark-blue-800 placeholder:text-neutral-gray-500 focus:placeholder:text-transparent dark:bg-neutral-dark-blue-500 dark:caret-white dark:placeholder:text-white md:pl-16 "

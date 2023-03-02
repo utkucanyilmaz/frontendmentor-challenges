@@ -16,7 +16,7 @@ function App() {
         <div className="container mx-auto">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/:country" element={<CountryDetail />} />
+            <Route path="/:country_name" element={<CountryDetail />} />
           </Routes>
         </div>
       </div>
