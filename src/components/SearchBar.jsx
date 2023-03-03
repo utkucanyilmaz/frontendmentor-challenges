@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { FaSearch, FaTimes } from "react-icons/fa";
 import { useFilter } from "../context/FilterContext";
 

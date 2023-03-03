@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 import Loading from "../components/Loading";
 import BackButton from "../components/BackButton";
@@ -11,34 +11,62 @@ function CountryDetail() {
 
   const [country, setCountry] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [borders, setBorders] = useState(null);
+  const [additionalData, setAdditionalData] = useState({});
 
   useEffect(() => {
     (async function getCountryData() {
       try {
-        const { data } = await axios(
+        await axios(
           `https://restcountries.com/v3.1/name/${country_name}?fullText=true`
-        );
+        ).then(({ data }) => {
+          setCountry(data[0]);
+        });
+
         setLoading(false);
-        setCountry(data[0]);
       } catch (e) {
         console.log(e);
       }
     })();
   }, []);
 
-  const nativeName =
-    country &&
-    Object.values(country.name.nativeName)
-      .map(nativeName => nativeName.common)
-      .join(", ");
+  useEffect(() => {
+    if (country) {
+      if (country.borders) {
+        setBorderNames(country);
+      }
 
-  const currencies =
-    country &&
-    Object.values(country.currencies)
-      .map(currency => currency.name)
-      .join(", ");
+      setAdditionalData(() => convertObjData(country));
+    }
+  }, [country]);
 
-  const languages = country && Object.values(country.languages).join(", ");
+  async function setBorderNames(obj) {
+    const { data: bordersData } = await axios(
+      `https://restcountries.com/v3.1/alpha?codes=${obj.borders
+        .join(",")
+        .toLowerCase()}`
+    );
+
+    setBorders(() => bordersData.map(border => border.name.common));
+  }
+
+  function convertObjData(obj) {
+    const nativeName =
+      obj.name.nativeName &&
+      Object.values(obj.name.nativeName)
+        .map(nativeName => nativeName.common)
+        .join(", ");
+
+    const currencies =
+      obj.currencies &&
+      Object.values(obj.currencies)
+        .map(currency => currency.name)
+        .join(", ");
+
+    const languages = obj.languages && Object.values(obj.languages).join(", ");
+
+    return { nativeName, currencies, languages };
+  }
 
   return (
     <section className="mx-4 mb-6 flex flex-col gap-y-7">
@@ -64,7 +92,7 @@ function CountryDetail() {
                 <div className="flex flex-col gap-y-1 md:gap-y-3">
                   <div>
                     <span className="font-extrabold">Native Name: </span>
-                    {nativeName}
+                    {additionalData.nativeName}
                   </div>
                   <div>
                     <span className="font-extrabold">Population: </span>
@@ -90,11 +118,11 @@ function CountryDetail() {
                   </div>
                   <div>
                     <span className="font-extrabold">Currencies: </span>
-                    {currencies}
+                    {additionalData.currencies}
                   </div>
                   <div>
                     <span className="font-extrabold">Languages: </span>
-                    {languages}
+                    {additionalData.languages}
                   </div>
                 </div>
               </div>
@@ -104,15 +132,16 @@ function CountryDetail() {
                     Border Countries:{" "}
                   </span>
 
-                  {!country.borders
+                  {!borders
                     ? "None"
-                    : country.borders?.map((border, key) => (
-                        <span
+                    : borders.map((border, key) => (
+                        <Link
+                          to={`/${border.toLowerCase()}`}
                           key={key}
                           className="mr-2 rounded bg-white px-4 py-1 text-neutral-dark-blue-800 shadow dark:bg-neutral-dark-blue-500 dark:text-white"
                         >
                           {border}
-                        </span>
+                        </Link>
                       ))}
                 </div>
               </div>
