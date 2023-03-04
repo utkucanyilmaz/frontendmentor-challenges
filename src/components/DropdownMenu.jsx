@@ -1,6 +1,14 @@
 import { useFilter } from "../context/FilterContext";
 
-const regions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
+const regions = [
+  "All",
+  "Africa",
+  "Americas",
+  "Asia",
+  "Europe",
+  "Oceania",
+  "Antarctic",
+];
 
 function DropdownMenu() {
   const { regionVal, setRegionVal } = useFilter();
