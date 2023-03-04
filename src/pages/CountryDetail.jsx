@@ -138,6 +138,7 @@ function CountryDetail() {
                         <Link
                           to={`/${border.toLowerCase()}`}
                           key={key}
+                          reloadDocument
                           className="mr-2 rounded bg-white px-4 py-1 text-neutral-dark-blue-800 shadow dark:bg-neutral-dark-blue-500 dark:text-white"
                         >
                           {border}
