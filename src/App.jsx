@@ -1,6 +1,20 @@
 import btnArrow from "/images/icon-arrow.svg";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Info from "./components/Info";
 
 function App() {
+  const [clientIP, setClientIP] = useState("");
+
+  const getClientIP = async () => {
+    const res = await axios.get("https://geolocation-db.com/json/");
+    setClientIP(res.data.IPv4);
+  };
+
+  useEffect(() => {
+    getClientIP();
+  }, []);
+
   return (
     <div className="h-screen bg-red-500  font-rubik text-black">
       <div
@@ -21,43 +35,7 @@ function App() {
           </button>
         </div>
 
-        <div className="absolute bottom-0 grid translate-y-1/2 grid-cols-4 gap-x-8 rounded-2xl bg-white px-8 py-9">
-          <div className="flex flex-col gap-y-3 border-r border-r-dark-gray pr-12">
-            <div className="text-xs font-bold uppercase tracking-widest text-dark-gray">
-              IP Address
-            </div>
-            <div className="text-2xl font-semibold text-very-dark-gray">
-              192.212.174.101
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-y-3 border-r border-r-dark-gray pr-12">
-            <div className="text-xs font-bold uppercase tracking-widest text-dark-gray">
-              Location
-            </div>
-            <div className="max-w-[10ch] text-2xl font-semibold text-very-dark-gray">
-              Brooklyn, NY 10001
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-y-3 border-r border-r-dark-gray pr-12">
-            <div className="text-xs font-bold uppercase tracking-widest text-dark-gray">
-              Timezone
-            </div>
-            <div className="max-w-[10ch] text-2xl font-semibold text-very-dark-gray">
-              UTC -05:00
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-y-3 border-r-dark-gray pr-12">
-            <div className="text-xs font-bold uppercase tracking-widest text-dark-gray">
-              ISP
-            </div>
-            <div className="max-w-[10ch] text-2xl font-semibold text-very-dark-gray">
-              SpaceX Starlink
-            </div>
-          </div>
-        </div>
+        <Info />
       </div>
     </div>
   );
