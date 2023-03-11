@@ -31,7 +31,7 @@ function App() {
   }, [clientIp]);
 
   return (
-    <div className="h-screen bg-red-500  font-rubik text-black">
+    <div className="h-screen font-rubik text-black antialiased">
       <div
         className="relative flex h-[280px] w-full flex-col items-center justify-start bg-pattern-desktop bg-cover bg-center
         bg-no-repeat"

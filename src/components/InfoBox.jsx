@@ -2,7 +2,7 @@ import React from "react";
 
 function InfoBox({ title, body }) {
   return (
-    <div className="flex flex-col gap-y-3 border-r-gray-300 pr-12">
+    <div className="flex flex-col gap-y-3 border-r-gray-300 pl-8 last:pr-12">
       <div className="text-xs font-bold uppercase tracking-widest text-dark-gray">
         {title}
       </div>
