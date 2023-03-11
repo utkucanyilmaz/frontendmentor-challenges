@@ -11,7 +11,12 @@ function Location({ info }) {
   });
 
   return (
-    <MapContainer center={position} zoom={17} scrollWheelZoom={false}>
+    <MapContainer
+      center={position}
+      zoom={17}
+      scrollWheelZoom={false}
+      zoomControl={false}
+    >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

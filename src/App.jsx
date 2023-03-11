@@ -38,10 +38,12 @@ function App() {
   return (
     <div className="h-screen font-rubik text-black antialiased">
       <div
-        className="relative flex h-[280px] w-full flex-col items-center justify-start bg-pattern-desktop bg-cover bg-center
-        bg-no-repeat"
+        className="relative flex h-[280px] w-full flex-col items-center justify-start bg-pattern-mobile bg-cover bg-center
+        bg-no-repeat sm:bg-pattern-desktop"
       >
-        <h1 className="py-8 text-3xl text-white">IP Address Tracker</h1>
+        <h1 className="py-4 text-xl text-white sm:py-8 sm:text-3xl">
+          IP Address Tracker
+        </h1>
         <SearchBar setClientIp={setClientIp} setLoading={setLoading} />
         <Info info={info} />
       </div>

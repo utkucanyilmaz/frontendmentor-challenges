@@ -11,12 +11,12 @@ function SearchBar({ setClientIp }) {
   };
 
   return (
-    <div className="flex h-14 w-[555px] overflow-hidden rounded-2xl">
+    <div className="flex w-[555px] max-w-[calc(100%-2rem)] overflow-hidden rounded-2xl">
       <input
         ref={ip}
         placeholder="Search for any IP address or domain"
         type="text"
-        className="h-full w-full px-6 text-lg placeholder:text-dark-gray"
+        className="h-full w-full p-4 text-sm placeholder:text-dark-gray sm:px-6 sm:py-0 sm:text-lg"
       />
 
       <button
