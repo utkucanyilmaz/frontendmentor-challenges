@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Info from "./components/Info";
 import SearchBar from "./components/SearchBar";
+import Location from "./components/Location";
+import Loading from "./components/Loading";
 
 function App() {
   const [clientIp, setClientIp] = useState("");
   const [info, setInfo] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const getClientIp = async () => {
     const res = await axios.get("https://geolocation-db.com/json/");
@@ -13,12 +16,14 @@ function App() {
   };
 
   const getInfo = async () => {
+    setLoading(true);
     if (clientIp) {
       const res = await axios.get(
         `https://geo.ipify.org/api/v2/country,city?apiKey=
         at_HmwBCdmMExOb5uX1X99BKdDYRL0lX&ipAddress=${clientIp}`
       );
       setInfo(res.data);
+      setLoading(false);
     }
   };
 
@@ -37,9 +42,10 @@ function App() {
         bg-no-repeat"
       >
         <h1 className="py-8 text-3xl text-white">IP Address Tracker</h1>
-        <SearchBar setClientIp={setClientIp} />
+        <SearchBar setClientIp={setClientIp} setLoading={setLoading} />
         <Info info={info} />
       </div>
+      {loading ? <Loading /> : <Location info={info} />}
     </div>
   );
 }
