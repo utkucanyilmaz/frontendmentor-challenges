@@ -7,3 +7,8 @@
 .country-card {
   @apply flex h-full max-w-min cursor-pointer flex-col gap-y-8 overflow-hidden rounded bg-white text-sm shadow-md hover:bg-neutral-100 dark:bg-neutral-dark-blue-500 dark:hover:bg-opacity-70;
 }
+
+.leaflet-container {
+  width: 100%;
+  height: 360px;
+}

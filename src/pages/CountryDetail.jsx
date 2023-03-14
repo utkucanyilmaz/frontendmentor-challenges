@@ -5,6 +5,7 @@ import { useParams, Link } from "react-router-dom";
 
 import Loading from "../components/Loading";
 import BackButton from "../components/BackButton";
+import Map from "../components/Map";
 
 function CountryDetail() {
   const { country_name } = useParams();
@@ -69,7 +70,7 @@ function CountryDetail() {
   }
 
   return (
-    <section className="mx-4 mb-6 flex flex-col gap-y-7">
+    <section className="mb-6 flex flex-col gap-y-7">
       {loading && <Loading />}
       {!loading && (
         <>
@@ -150,6 +151,7 @@ function CountryDetail() {
           </div>
         </>
       )}
+      {!loading && <Map country={country} />}
     </section>
   );
 }
