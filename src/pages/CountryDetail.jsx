@@ -70,7 +70,7 @@ function CountryDetail() {
   }
 
   return (
-    <section className="mb-6 flex flex-col gap-y-7">
+    <section className="mx-4 mb-6 flex flex-col gap-y-7">
       {loading && <Loading />}
       {!loading && (
         <>
