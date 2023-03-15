@@ -14,7 +14,7 @@ function CountryCard({ flagSrc, name, population, region, capital, alt }) {
         />
       </div>
 
-      <div className="flex flex-col gap-y-1 px-6 pb-9 text-neutral-dark-blue-800 dark:text-white">
+      <div className="flex flex-col gap-y-1 px-6 pb-9 text-neutral-dark-blue-800 transition-colors dark:text-white">
         <p className="mb-4 text-lg font-bold">{name}</p>
         <p>
           <span className="font-semibold">Population: </span>

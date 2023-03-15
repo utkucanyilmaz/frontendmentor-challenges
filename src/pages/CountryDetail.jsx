@@ -85,7 +85,7 @@ function CountryDetail() {
                 alt={country.flags.alt}
               />
             </div>
-            <div className="mr-6 flex flex-col gap-y-10 text-left font-nunito font-medium text-neutral-dark-blue-800 dark:text-white md:my-auto">
+            <div className="mr-6 flex flex-col gap-y-10 text-left font-nunito font-medium text-neutral-dark-blue-800 transition-colors dark:text-white md:my-auto">
               <h1 className="mt-10 text-3xl font-extrabold sm:mt-0">
                 {country.name.common}
               </h1>
@@ -128,7 +128,7 @@ function CountryDetail() {
                 </div>
               </div>
               <div>
-                <div className="flex flex-row flex-wrap items-start gap-y-4 lg:items-center">
+                <div className="flex flex-row flex-wrap items-center gap-y-2 lg:items-center">
                   <span className="mr-4 inline-flex font-extrabold">
                     Border Countries:{" "}
                   </span>
@@ -140,7 +140,7 @@ function CountryDetail() {
                           to={`/${border.toLowerCase()}`}
                           key={key}
                           reloadDocument
-                          className="mr-2 rounded bg-white px-4 py-1 text-neutral-dark-blue-800 shadow dark:bg-neutral-dark-blue-500 dark:text-white"
+                          className="mr-2 rounded bg-white px-4 py-1 text-neutral-dark-blue-800 shadow transition-colors hover:shadow-xl dark:bg-neutral-dark-blue-500 dark:text-white"
                         >
                           {border}
                         </Link>
