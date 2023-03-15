@@ -11,7 +11,7 @@ const regions = [
 ];
 
 function DropdownMenu() {
-  const { regionVal, setRegionVal } = useFilter();
+  const { regionVal, setRegionVal, setPage } = useFilter();
 
   const options = regions.map((region, index) => (
     <option value={region} key={index}>
@@ -21,6 +21,7 @@ function DropdownMenu() {
 
   const handleChange = ({ target }) => {
     setRegionVal(target.value);
+    setPage(1);
   };
 
   return (

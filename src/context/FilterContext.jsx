@@ -7,6 +7,7 @@ const FilterProvider = ({ children }) => {
   const [countries, setCountries] = useState(null);
   const [regionVal, setRegionVal] = useState("All");
   const [filtered, setFiltered] = useState(null);
+  const [page, setPage] = useState(1);
 
   const values = {
     countries,
@@ -15,6 +16,8 @@ const FilterProvider = ({ children }) => {
     setRegionVal,
     filtered,
     setFiltered,
+    page,
+    setPage,
   };
 
   const orderedCountries = (countries = []) =>
