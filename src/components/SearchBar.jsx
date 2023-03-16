@@ -7,16 +7,22 @@ function SearchBar() {
 
   const { setFiltered, countries } = useFilter();
 
+  const debounceTimeout = useRef(null);
+
   const handleChange = ({ target }) => {
-    setFiltered(() =>
-      countries.filter(country =>
-        country.name.common
-          .toString()
-          .toLowerCase()
-          .trim()
-          .includes(target.value.toString().toLowerCase().trim())
-      )
-    );
+    clearTimeout(debounceTimeout.current);
+
+    debounceTimeout.current = setTimeout(() => {
+      setFiltered(() =>
+        countries.filter(country =>
+          country.name.common
+            .toString()
+            .toLowerCase()
+            .trim()
+            .includes(target.value.toString().toLowerCase().trim())
+        )
+      );
+    }, 700);
   };
 
   const clearSearch = () => {
