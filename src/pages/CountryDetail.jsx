@@ -76,11 +76,11 @@ function CountryDetail() {
   }
 
   return (
-    <section className="mx-4 mb-6 flex flex-col gap-y-7">
+    <section className="mx-4 mb-6 flex flex-col gap-y-4">
       {loading && <Loading />}
       {!loading && (
         <>
-          <div className="my-4 sm:my-8 sm:ml-0">
+          <div className="my-2 sm:my-4 sm:ml-0">
             <BackButton />
           </div>
           <div className="grid grid-cols-1 gap-x-10 sm:grid-cols-2">
@@ -145,7 +145,7 @@ function CountryDetail() {
                         <Link
                           to={`/${border.toLowerCase()}`}
                           key={key}
-                          className="mr-2 rounded bg-white px-4 py-1 text-neutral-dark-blue-800 shadow transition-colors hover:shadow-xl dark:bg-neutral-dark-blue-500 dark:text-white"
+                          className="mr-2 rounded bg-white px-4 py-1 text-neutral-dark-blue-800 shadow transition-all hover:shadow-xl dark:bg-neutral-dark-blue-500 dark:text-white"
                         >
                           {border}
                         </Link>

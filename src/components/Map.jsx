@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker } from "react-leaflet";
 function Map({ country }) {
   return (
     <MapContainer
-      className="my-10"
+      className="my-4"
       center={country.latlng}
       zoom={1}
       scrollWheelZoom={true}

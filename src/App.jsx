@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className={`${theme}`}>
-      <div className="flex min-h-screen flex-col gap-y-8 bg-neutral-gray-100 font-nunito transition-colors dark:bg-neutral-dark-blue-700">
+      <div className="flex min-h-screen flex-col gap-y-4 bg-neutral-gray-100 font-nunito transition-colors dark:bg-neutral-dark-blue-700">
         <Header />
         <div className="container mx-auto">
           <Routes>
