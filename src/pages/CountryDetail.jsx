@@ -16,57 +16,63 @@ function CountryDetail() {
   const [additionalData, setAdditionalData] = useState({});
 
   useEffect(() => {
-    (async function getCountryData() {
-      try {
-        await axios(
-          `https://restcountries.com/v3.1/name/${country_name}?fullText=true`
-        ).then(({ data }) => {
-          setCountry(data[0]);
-        });
+    setLoading(true);
 
+    async function getCountryData() {
+      try {
+        const { data } = await axios(
+          `https://restcountries.com/v3.1/name/${country_name}?fullText=true`
+        );
+        setCountry(data[0]);
         setLoading(false);
-      } catch (e) {
-        console.log(e);
+      } catch (error) {
+        console.log(error);
       }
-    })();
-  }, []);
+    }
+
+    getCountryData();
+  }, [country_name]);
 
   useEffect(() => {
     if (country) {
-      if (country.borders) {
-        setBorderNames(country);
-      }
-
-      setAdditionalData(() => convertObjData(country));
+      setAdditionalData(convertCountryData(country));
+      setBordersFromAlphaCodes(country);
     }
   }, [country]);
 
-  async function setBorderNames(obj) {
-    const { data: bordersData } = await axios(
-      `https://restcountries.com/v3.1/alpha?codes=${obj.borders
-        .join(",")
-        .toLowerCase()}`
-    );
-
-    setBorders(() => bordersData.map(border => border.name.common));
+  async function setBordersFromAlphaCodes({ borders }) {
+    if (!borders || borders.length === 0) return;
+    try {
+      const { data } = await axios(
+        `https://restcountries.com/v3.1/alpha?codes=${borders
+          .join(",")
+          .toLowerCase()}`
+      );
+      setBorders(data.map(border => border.name.common));
+    } catch (error) {
+      console.log(error);
+    }
   }
 
-  function convertObjData(obj) {
+  function convertCountryData({ name, currencies, languages }) {
     const nativeName =
-      obj.name.nativeName &&
-      Object.values(obj.name.nativeName)
+      name.nativeName &&
+      Object.values(name.nativeName)
         .map(nativeName => nativeName.common)
         .join(", ");
 
-    const currencies =
-      obj.currencies &&
-      Object.values(obj.currencies)
+    const currenciesList =
+      currencies &&
+      Object.values(currencies)
         .map(currency => currency.name)
         .join(", ");
 
-    const languages = obj.languages && Object.values(obj.languages).join(", ");
-
-    return { nativeName, currencies, languages };
+    const languagesList = languages && Object.values(languages).join(", ");
+    return {
+      nativeName,
+      currencies: currenciesList,
+      languages: languagesList,
+    };
   }
 
   return (
@@ -139,7 +145,6 @@ function CountryDetail() {
                         <Link
                           to={`/${border.toLowerCase()}`}
                           key={key}
-                          reloadDocument
                           className="mr-2 rounded bg-white px-4 py-1 text-neutral-dark-blue-800 shadow transition-colors hover:shadow-xl dark:bg-neutral-dark-blue-500 dark:text-white"
                         >
                           {border}
