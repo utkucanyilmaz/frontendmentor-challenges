@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-dark-blue font-open-sans text-sm text-white leading-[1.5];
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+nav {
+  @apply font-raleway;
+}
+
+.gradient-button {
+  @apply bg-gradient-to-r from-gradient-cyan to-gradient-blue px-12 py-3 rounded-full hover:opacity-80 hover:transition-opacity;
+}
+
+.feature-card {
+  @apply flex flex-col items-center text-center max-w-[45ch];
+}
+
+.feature-card-descp {
+  @apply opacity-75;
+}
+
+.feature-card .feature-card-title {
+  @apply font-bold mt-6 mb-3 text-lg;
+}
+
+#productive p {
+  @apply opacity-75 max-w-[60ch];
+}
+
+.testimonial-card {
+  @apply bg-darker-blue px-6 py-10 rounded-md;
+}
+
+.testimonial-card p {
+  @apply mb-6 opacity-75;
+}
+
+.testimonial-card .profile {
+  @apply flex gap-3 items-center;
+}
+
+.testimonial-card .profile h5 {
+  @apply text-sm;
+}
+.testimonial-card .profile h6 {
+  @apply text-xs opacity-75 mt-1;
+}
+
+.testimonial-card .profile .profile-image {
+  @apply w-8 h-8 rounded-full overflow-hidden;
+}
+
+footer .bottom > * {
+  @apply flex-[1];
+}
+
+.communication {
+  @apply flex gap-6;
+}
+
+.communication .item {
+  @apply flex flex-col items-start gap-3;
+}
