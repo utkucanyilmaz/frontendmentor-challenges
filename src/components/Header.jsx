@@ -13,7 +13,7 @@ function Header() {
         />
       </div>
 
-      <div className="w-[38%] h-[1px] bg-hover mr-auto ml-16 z-10 opacity-25"></div>
+      <div className="w-[38%] h-[1px] bg-opacity-50 bg-white mr-auto ml-16 z-10 opacity-25"></div>
 
       <nav className="font-barlow-condensed flex gap-x-12 text-white">
         {navItems.map((item, idx) => (

@@ -42,7 +42,7 @@ function Destination() {
                 <h1 className="uppercase text-100 text-white leading-[1.15] mb-4">
                   {destination.name}
                 </h1>
-                <p className="text-tealish-blue max-w-[45ch] leading-8">
+                <p className="text-tealish-blue max-w-[44ch] leading-8">
                   {destination.description}
                 </p>
               </div>

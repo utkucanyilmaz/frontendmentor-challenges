@@ -6,7 +6,6 @@ module.exports = {
       colors: {
         "dark-blue": "#0B0D17",
         "tealish-blue": "#D0D6F9",
-        hover: "#979797",
       },
 
       fontFamily: {
@@ -32,6 +31,10 @@ module.exports = {
           "url('/assets/destination/background-destination-tablet.jpg')",
         "destination-mobile":
           "url('/assets/destination/background-destination-mobile.jpg')",
+
+        "crew-desktop": "url('/assets/crew/background-crew-desktop.jpg')",
+        "crew-tablet": "url('/assets/crew/background-crew-tablet.jpg')",
+        "crew-mobile": "url('/assets/crew/background-crew-mobile.jpg')",
       },
 
       letterSpacing: {
