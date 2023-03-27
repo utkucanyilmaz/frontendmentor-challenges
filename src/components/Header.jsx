@@ -20,7 +20,7 @@ function Header() {
           <a
             key={idx}
             href="#"
-            className="flex gap-x-3 uppercase py-8 border-b-[3px] hover:border-hover tracking-[2.7px] text-base"
+            className="flex gap-x-3 uppercase py-8 border-b-[3px] hover:border-hover tracking-nav text-base"
           >
             <span className="font-bold">0{idx}</span>
             {item}
