@@ -31,7 +31,7 @@ function Destination() {
                   <a
                     key={idx}
                     href="#"
-                    className="text-base font-barlow-condensed tracking-nav uppercase text-tealish-blue py-3 border-b-[3px] hover:border-hover"
+                    className="text-base font-barlow-condensed tracking-nav uppercase text-tealish-blue py-3 border-b-[3px] hover:border-white hover:border-opacity-50"
                   >
                     {destination.name}
                   </a>
