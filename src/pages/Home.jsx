@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -18,10 +19,13 @@ function Home() {
         </p>
       </div>
 
-      <button className="text-dark-blue bg-white uppercase rounded-full font-bellefair text-3xl h-[274px] w-[274px] relative group z-10">
+      <Link
+        to="/destination"
+        className="text-dark-blue bg-white uppercase rounded-full font-bellefair text-3xl h-[274px] w-[274px] relative group z-10 flex items-center justify-center"
+      >
         <div className="h-full w-full rounded-full bg-white bg-opacity-75 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  group-hover:scale-150 transition-transform -z-10 opacity-20"></div>
         Explore
-      </button>
+      </Link>
     </main>
   );
 }

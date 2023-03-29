@@ -16,3 +16,7 @@ h6 {
 p {
   @apply font-barlow;
 }
+
+.active {
+  @apply border-b-[3px] border-white;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   const navItems = ["home", "destination", "crew", "technology"];
@@ -17,14 +18,14 @@ function Header() {
 
       <nav className="font-barlow-condensed flex gap-x-12 text-white">
         {navItems.map((item, idx) => (
-          <a
+          <NavLink
             key={idx}
-            href="#"
-            className="flex gap-x-3 uppercase py-8 border-b-[3px] hover:border-white hover:border-opacity-50 tracking-nav text-base"
+            to={item === "home" ? "/" : item}
+            className="flex gap-x-3 uppercase py-8 tracking-nav text-base hover:border-b-[3px] hover:border-white hover:border-opacity-50 transition-colors"
           >
             <span className="font-bold">0{idx}</span>
             {item}
-          </a>
+          </NavLink>
         ))}
       </nav>
     </header>

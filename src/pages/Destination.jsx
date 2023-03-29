@@ -2,16 +2,18 @@ import { useState, useEffect } from "react";
 import data from "../data.json";
 
 function Destination() {
-  const [destination, setDestination] = useState("");
+  const [destination, setDestination] = useState(null);
+  const [active, setActive] = useState(0);
+
+  function handleDestinationClick(idx) {
+    setDestination(data.destinations[idx]);
+    setActive(() => idx);
+  }
+
   useEffect(() => {
     setDestination(data.destinations[0]);
   }, []);
 
-  useEffect(() => {
-    console.log(destination);
-  }, [destination]);
-
-  console.log(data);
   return (
     <main className="text-white ml-16 mt-20 flex flex-col gap-y-16">
       {destination && (
@@ -28,18 +30,22 @@ function Destination() {
             <div className="flex flex-col gap-y-9">
               <nav className="flex gap-x-9">
                 {data.destinations.map((destination, idx) => (
-                  <a
+                  <button
                     key={idx}
-                    href="#"
-                    className="text-base font-barlow-condensed tracking-nav uppercase text-tealish-blue py-3 border-b-[3px] hover:border-white hover:border-opacity-50"
+                    onClick={() => handleDestinationClick(idx)}
+                    className={`text-base font-barlow-condensed tracking-nav uppercase py-3 hover:border-b-[3px] hover:border-white hover:border-opacity-50 transition-colors ${
+                      active === idx
+                        ? "text-white border-b-[3px]"
+                        : "text-tealish-blue border-b-[3px] border-transparent"
+                    }`}
                   >
                     {destination.name}
-                  </a>
+                  </button>
                 ))}
               </nav>
 
               <div className="pb-14 border-b border-white border-opacity-25">
-                <h1 className="uppercase text-100 text-white leading-[1.15] mb-4">
+                <h1 className="uppercase text-100 leading-[1.15] mb-4">
                   {destination.name}
                 </h1>
                 <p className="text-tealish-blue max-w-[44ch] leading-8">
