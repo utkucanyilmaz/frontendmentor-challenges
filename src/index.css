@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-dark-blue antialiased overflow-x-hidden;
+}
+
 h1,
 h2,
 h3,
@@ -18,5 +22,5 @@ p {
 }
 
 .active {
-  @apply border-b-[3px] border-white;
+  @apply border-r-[4px] md:border-r-0 md:border-b-[3px] border-white;
 }
