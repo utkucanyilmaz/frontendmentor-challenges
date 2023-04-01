@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-dark-blue antialiased overflow-x-hidden;
+  @apply bg-dark-blue antialiased;
 }
 
 h1,
