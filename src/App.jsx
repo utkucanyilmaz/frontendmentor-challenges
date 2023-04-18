@@ -6,7 +6,6 @@ import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, MotionConfig } from "framer-motion";
-import AnimatePages from "./components/AnimatePages";
 
 function App() {
   let location = useLocation().pathname;

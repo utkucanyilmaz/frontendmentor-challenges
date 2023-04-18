@@ -5,7 +5,7 @@ import AnimatePages from "../components/AnimatePages";
 function Home() {
   return (
     <AnimatePages>
-      <main className="flex flex-col items-center xl:flex-row justify-between xl:items-end mt-6 md:mt-24 xl:mt-64 xl:mx-16 text-center xl:text-start">
+      <main className="flex flex-col items-center xl:flex-row justify-between xl:items-end mt-6 md:mt-24 xl:mt-0 xl:min-h-[60vh] xl:mx-16 text-center xl:text-start">
         <div className="flex flex-col gap-y-4 md:gap-y-6 mb-10 md:mb-40 xl:mb-0">
           <div className="text-base md:text-xl xl:text-28 text-tealish-blue font-barlow-condensed xl:tracking-header">
             SO, YOU WANT TO TRAVEL TO
