@@ -3,3 +3,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply selection:bg-primary-purple selection:text-white;
+}
+
+input {
+  @apply border border-neutral-light-gray max-w-[158px] h-[72px] rounded-lg focus:outline-primary-purple focus:outline-1 text-[32px] p-6 caret-primary-purple transition-colors hover:border-primary-purple;
+}
+
+.input-container {
+  @apply flex flex-col gap-4;
+}
+
+label {
+  @apply uppercase text-neutral-off-black text-opacity-60;
+}
+
+.error-text {
+  @apply text-primary-light-red;
+}
+
+.error-border {
+  @apply border-primary-light-red;
+}
+
+.error-message {
+  @apply italic text-primary-light-red;
+}
+
+#age > div {
+  @apply text-neutral-off-black;
+}
+
+#years,
+#months,
+#days {
+  @apply text-primary-purple;
+}
