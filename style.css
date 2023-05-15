@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slider-button {
+  @apply inline-flex h-14 w-14 items-center justify-center bg-black hover:bg-darker-gray;
+}
