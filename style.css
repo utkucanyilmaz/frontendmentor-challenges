@@ -7,3 +7,7 @@
 .slider-button {
   @apply inline-flex h-14 w-14 items-center justify-center bg-black hover:bg-darker-gray;
 }
+
+.black-layer {
+  @apply overflow-hidden before:absolute before:z-10 before:h-full before:w-full before:bg-black before:opacity-60;
+}
