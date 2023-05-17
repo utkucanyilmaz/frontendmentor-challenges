@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="style.css" />
     <title>Room Homepage</title>
   </head>
-  <body>
-    <div id="app" class="relative font-league-spartan text-dark-gray">
+  <body class="bg-white">
+    <div
+      id="app"
+      class="relative mx-auto max-w-[1440px] font-league-spartan text-dark-gray"
+    >
       <header class="absolute left-0 top-0 z-10 w-full px-6">
-        <nav class="flex items-center py-12">
+        <nav class="flex items-center py-12 md:hidden">
           <button id="nav-btn">
             <img src="/images/icon-hamburger.svg" alt="Navigation menu icon" />
           </button>
@@ -19,56 +22,90 @@
           /></a>
           <div
             id="navbar"
-            class="absolute left-0 top-0 z-30 flex h-28 w-full -translate-x-full items-center justify-between bg-white px-5 transition-transform"
+            class="absolute left-0 top-0 z-30 flex h-28 w-full -translate-x-full items-center justify-between bg-white px-6 transition-transform"
           >
             <button id="nav-close-btn" class="p-1">
               <img
                 src="/images/icon-close.svg"
                 alt="Navigation menu close icon"
+                class="h-4 w-4"
               />
             </button>
-            <ul class="flex gap-x-4 font-bold text-black">
-              <li class="p-2"><a href="#">home</a></li>
-              <li class="p-2"><a href="#">shop</a></li>
-              <li class="p-2"><a href="#">about</a></li>
-              <li class="p-2"><a href="#">contact</a></li>
+            <ul class="flex gap-x-7 font-bold text-black">
+              <li class="py-2"><a href="#">home</a></li>
+              <li class="py-2"><a href="#">shop</a></li>
+              <li class="py-2"><a href="#">about</a></li>
+              <li class="py-2"><a href="#">contact</a></li>
             </ul>
           </div>
         </nav>
       </header>
       <main>
-        <div>
-          <div class="relative w-full">
-            <img
-              id="hero-image"
-              src="/images/mobile-image-hero-1.jpg"
-              alt="mobile-image-hero-1"
-            />
-            <div class="absolute bottom-0 right-0 flex">
-              <button id="slider-left" class="slider-button">
-                <img
-                  class="h-[18px]"
-                  src="/images/icon-angle-left.svg"
-                  alt=""
-                />
-              </button>
-              <button id="slider-right" class="slider-button">
-                <img
-                  class="h-[18px]"
-                  src="/images/icon-angle-right.svg"
-                  alt=""
-                />
-              </button>
-            </div>
+        <div
+          class="flex flex-col items-center justify-center bg-white xl:flex-row"
+        >
+          <div
+            class="relative flex items-center justify-center md:w-full xl:w-auto"
+          >
+            <picture class="relative block max-w-full">
+              <source
+                id="mobile-image-hero"
+                media="(max-width: 375px)"
+                srcset="/images/mobile-image-hero-1.jpg"
+              />
+              <img
+                id="desktop-image-hero"
+                src="/images/desktop-image-hero-1.jpg"
+                alt="hero-image"
+                class="w-full md:max-w-[840px]"
+              />
+              <div class="absolute bottom-0 right-0 flex xl:-right-40">
+                <button id="slider-left" class="slider-button">
+                  <img
+                    class="h-[18px] md:h-6"
+                    src="/images/icon-angle-left.svg"
+                    alt=""
+                  />
+                </button>
+                <button id="slider-right" class="slider-button">
+                  <img
+                    class="h-[18px] md:h-6"
+                    src="/images/icon-angle-right.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+              <nav
+                class="absolute left-16 top-16 hidden items-center gap-x-14 md:flex"
+              >
+                <a href="#" class="mx-auto"
+                  ><img src="/images/logo.svg" alt="room"
+                /></a>
+                <ul class="flex gap-x-7 text-lg font-semibold text-white">
+                  <li class="nav-item">
+                    <a href="#">home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#">shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#">about</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#">contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </picture>
           </div>
-          <div class="bg-white px-8 py-16">
+          <div id="product-descp" class="px-8 py-16 xl:py-0 xl:pl-24 xl:pr-20">
             <h1
               id="title"
-              class="text-[40px] font-semibold leading-9 tracking-tighter text-black"
+              class="text-[40px] font-semibold leading-9 tracking-tighter text-black md:max-w-[15ch] md:text-5xl"
             >
               Discover innovative ways to decorate
             </h1>
-            <p id="descp" class="mt-4 leading-[22px]">
+            <p id="descp" class="mt-4 leading-[22px] md:max-w-[45ch]">
               We provide unmatched quality, comfort, and style for property
               owners across the country. Our experts combine form and function
               in bringing your vision to life. Create a room in your own style
@@ -76,24 +113,31 @@
               what you love.
             </p>
 
-            <button class="mt-8 flex items-center gap-x-5 py-2">
-              <span class="text-sm font-semibold tracking-[0.80rem] text-black"
+            <button class="group mt-8 flex items-center gap-x-5 py-2">
+              <span
+                class="text-sm font-semibold tracking-[0.80rem] text-black transition-colors group-hover:text-dark-gray md:text-base"
                 >SHOP NOW</span
-              ><img src="/images/icon-arrow.svg" alt="" />
+              ><img
+                class="transition-opacity group-hover:opacity-50"
+                src="/images/icon-arrow.svg"
+                alt=""
+              />
             </button>
           </div>
         </div>
-        <div>
-          <div class="relative w-full">
+        <div
+          class="flex flex-col items-center justify-center bg-white md:justify-around xl:flex-row"
+        >
+          <div>
             <img src="/images/image-about-dark.jpg" alt="image-about-dark" />
           </div>
-          <div class="bg-white px-8 py-10">
+          <div class="bg-white px-8 py-10 xl:px-14 xl:py-4">
             <h2
-              class="text-sm font-bold uppercase tracking-[0.37rem] text-black"
+              class="text-sm font-bold uppercase tracking-[0.37rem] text-black md:text-base"
             >
               About our furniture
             </h2>
-            <p class="mt-4 leading-[22px]">
+            <p class="mt-4 leading-[22px] md:max-w-[45ch] xl:max-w-[50ch]">
               Our multifunctional collection blends design and function to suit
               your individual taste. Make each room unique, or pick a cohesive
               theme that best express your interests and what inspires you. Find

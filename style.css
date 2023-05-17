@@ -5,9 +5,13 @@
 @tailwind utilities;
 
 .slider-button {
-  @apply inline-flex h-14 w-14 items-center justify-center bg-black hover:bg-darker-gray;
+  @apply inline-flex h-14 w-14 items-center justify-center bg-black transition-colors hover:bg-darker-gray md:h-20 md:w-20;
 }
 
 .black-layer {
   @apply overflow-hidden before:absolute before:z-10 before:h-full before:w-full before:bg-black before:opacity-60;
+}
+
+.nav-item {
+  @apply border border-b-4 border-transparent transition-colors hover:border-b-4 hover:border-b-white;
 }
