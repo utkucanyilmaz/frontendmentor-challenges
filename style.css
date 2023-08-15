@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  --fraunces: "Fraunces", serif;
+  --montserrat: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: var(--cream);
+  font-size: 14px;
+  font-family: var(--montserrat);
+}
+
+.container {
+  font-family: var(--montserrat);
+  padding: 28px 16px;
+  width: 375px;
+  border-radius: 10px;
+}
+
+.product-image-mobile {
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  background-color: var(--white);
+  height: auto;
+}
+
+.product-image-desktop {
+  display: none;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--white);
+}
+
+.product-info .product-type {
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+}
+
+.product-info h1 {
+  font-family: var(--fraunces);
+  margin-top: 12px;
+  font-size: 32px;
+  line-height: 1.02;
+  color: var(--very-dark-blue);
+}
+
+.product-info .product-descp {
+  margin-top: 16px;
+  line-height: 1.61;
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 22px;
+}
+
+.pricing .price {
+  color: var(--dark-cyan);
+  font-size: 32px;
+  font-family: var(--fraunces);
+}
+
+.pricing .old-price {
+  display: inline-block;
+  text-decoration: line-through;
+  margin-left: 20px;
+  line-height: 1;
+  font-size: 13px;
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 700;
+  background-color: var(--dark-cyan);
+  border: none;
+  margin-top: 16px;
+  color: var(--white);
+  padding: 16px 94px;
+}
+
+.add-to-cart:hover {
+  background-color: #1a4031;
+}
