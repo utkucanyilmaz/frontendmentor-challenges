@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(185, 75%, 39%);
+  font-size: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@media (min-width: 1441px) {
+  .card {
+    width: 352px;
+  }
+  .card__image {
+    left: 122px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  z-index: 3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  height: 376px;
+  width: 327px;
+  margin: 148px 25px;
+  border-radius: 15px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card__bg {
+  position: absolute;
+  z-index: 1;
+  background-image: url("images/bg-pattern-card.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.card__pattern-top {
+  position: absolute;
+  z-index: 2;
+  background-image: url("images/bg-pattern-top.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: auto;
+  top: -193px;
+  left: -170px;
+  bottom: 0;
+  right: 0;
+}
+
+.card__pattern-bottom {
+  position: absolute;
+  z-index: 2;
+  background-image: url("images/bg-pattern-bottom.svg");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 175px;
+  bottom: -138px;
+  right: 0;
+}
+
+.card__image {
+  z-index: 3;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: absolute;
+  top: 87px;
+  left: 110px;
+}
+
+.card__description {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 213px;
+}
+
+.card__name {
+  font-weight: 700;
+
+  color: hsl(229, 23%, 23%);
+}
+.card__name > span {
+  font-weight: 400;
+  margin-left: 5px;
+  color: hsl(227, 10%, 46%);
+}
+
+.card__location {
+  font-size: 14px;
+  margin-top: 8px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid hsl(0, 1%, 81%);
+  color: hsl(227, 10%, 46%);
+}
+.card__stats {
+  z-index: 2;
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  margin-top: 24px;
+}
+.card__stats .amount {
+  font-weight: 700;
+  color: hsl(229, 23%, 23%);
+}
+
+.card__stats .attribute {
+  font-size: 11px;
+  margin-top: 3px;
+  color: hsl(227, 10%, 46%);
+}
