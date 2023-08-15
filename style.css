@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url("images/bg-mobile.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: hsl(255, 100%, 100%);
+}
+
+i {
+  padding: 5px;
+  border: 1px solid hsl(255, 100%, 100%);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+i:nth-child(2) {
+  margin-inline: 9.5px;
+}
+
+.container {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  margin-top: 32px;
+}
+
+.header__logo {
+  width: 124px;
+}
+
+.huddle__image {
+  width: 100%;
+  margin-top: 56px;
+}
+
+.huddle__title {
+  margin-top: 56px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.huddle__description {
+  margin-top: 16px;
+  text-align: center;
+  line-height: 1.5;
+  color: hsl(255, 100%, 100%);
+}
+
+.huddle__register {
+  display: inline-block;
+  text-align: center;
+  margin-top: 24px;
+  margin-left: 50px;
+  padding: 11px 76px;
+  border-radius: 50px;
+  font-size: 12px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(255, 100%, 100%);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: all 200ms ease-in-out;
+}
+
+.huddle__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 63px;
+  margin-bottom: 63px;
+  color: hsl(255, 100%, 100%);
+}
+
+.huddle__register:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: hsl(255, 100%, 100%);
+}
+
+i:hover {
+  color: hsl(300, 69%, 71%);
+  border-color: hsl(300, 69%, 71%);
+}
+
+@media (min-width: 900px) {
+  body {
+    overflow: hidden;
+    background-image: url("images/bg-desktop.svg");
+    background-size: 91.5%;
+    background-position: top left;
+  }
+  .huddle {
+    display: flex;
+    margin-top: 26px;
+  }
+  .container {
+    max-width: 1294px;
+  }
+  .header__logo {
+    width: 210px;
+    margin-top: 22px;
+  }
+
+  .huddle__text {
+    margin-top: 42px;
+    margin-left: 52px;
+    padding-right: 10px;
+  }
+
+  .huddle__title {
+    font-size: 40px;
+    text-align: left;
+  }
+
+  .huddle__description {
+    text-align: left;
+    font-size: 18px;
+    margin-top: 22px;
+  }
+
+  .huddle__register {
+    font-size: 18px;
+    margin-left: 0;
+    padding: 14px 64px;
+  }
+
+  .huddle__socials {
+    display: flex;
+    margin-top: 20px;
+    padding-right: 8px;
+    justify-content: right;
+    font-size: 21px;
+  }
+
+  i {
+    padding: 9.2px;
+  }
+
+  i:nth-child(2) {
+    margin-inline: 16px;
+  }
+}
