@@ -1,0 +1,161 @@
+$veryDarkBlue: hsl(233, 47%, 7%);
+$darkSaturatedBlue: hsl(244, 38%, 16%);
+$softViolet: hsl(277, 64%, 61%);
+$white: hsl(0, 0%, 100%);
+$slightlyTransparentWhite: hsla(0, 0%, 100%, 0.75);
+$slightlyTransparentWhiteStats: hsla(0, 0%, 100%, 0.6);
+
+@mixin desktop {
+  @media (min-width: 64rem) {
+    @content;
+  }
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  font-size: 0.9375rem;
+  font-family: "Inter", sans-serif;
+  background-color: $veryDarkBlue;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 23.4375rem;
+  @include desktop() {
+    max-width: 90rem;
+  }
+}
+
+.previewcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $darkSaturatedBlue;
+  margin: 1.5625rem 4.6875rem;
+  border-radius: 0.625rem;
+  @include desktop() {
+    flex-direction: row;
+    margin: 10rem 0;
+  }
+
+  &__image {
+    position: relative;
+    @include desktop() {
+      width: 50%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem 0.5rem 0 0;
+      @include desktop() {
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+    }
+
+    @include desktop() {
+      order: 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(76, 5, 120, 0.6);
+      border-radius: 0.5rem 0.5rem 0 0;
+      @include desktop() {
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+    padding: 2.75rem 2.333rem 0.125rem 2.333rem;
+
+    @include desktop() {
+      order: 1;
+      padding-top: 5rem;
+      padding-right: 7.75rem;
+      padding-bottom: 4.25rem;
+      padding-left: 4.625rem;
+      width: 50%;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    color: $white;
+    font-size: 1.5rem;
+    margin-bottom: 1.375rem;
+    line-height: 1.2;
+    span {
+      color: $softViolet;
+    }
+
+    @include desktop() {
+      font-size: 2rem;
+      margin-bottom: 2.1875rem;
+    }
+  }
+
+  &__description {
+    color: $slightlyTransparentWhite;
+    margin-bottom: 3.25rem;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    @include desktop() {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__stats {
+    font-family: "Lexend Deca", sans-serif;
+    color: $white;
+    text-align: center;
+    @include desktop() {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+    }
+    h2 {
+      padding-bottom: 1rem;
+    }
+
+    p {
+      color: $slightlyTransparentWhiteStats;
+      margin-bottom: 2.4rem;
+      @include desktop() {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
