@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: hsl(225, 100%, 94%);
+  background-image: url("images/pattern-background-mobile.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+.component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-right: 24px;
+  margin-left: 24px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 12px 26px -11px rgb(114 128 167 / 75%);
+}
+
+.component__image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0 0;
+}
+.wrapper {
+  max-width: 279px;
+}
+.component__title {
+  font-size: 22px;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+.component__description {
+  line-height: 1.6;
+  font-size: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-weight: 500;
+  color: hsl(224, 23%, 55%);
+}
+
+.component__orderplan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(225, 100%, 98%);
+  margin-top: 30px;
+  padding: 16px;
+  border-radius: 14px;
+}
+
+.component__plan {
+  margin-right: 30px;
+}
+
+.component__plan-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: hsl(223, 47%, 23%);
+}
+
+.component__price {
+  margin-top: 3px;
+  font-size: 14px;
+  color: hsl(224, 23%, 55%);
+}
+
+.component__change {
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: hsl(245, 75%, 52%);
+  transition: all 200ms ease-in-out;
+}
+
+.button {
+  display: block;
+  background-color: hsl(245, 75%, 52%);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  padding: 15px 0px;
+  border-radius: 12px;
+  box-shadow: 0px 12px 26px -11px rgb(26 17 120 / 75%);
+  transition: all 200ms ease-in-out;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.component__cancel {
+  display: block;
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 34px;
+  color: hsl(224, 23%, 55%);
+  transition: all 200ms ease-in-out;
+}
+
+.component__change:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.component__cancel:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+@media (min-width: 900px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/pattern-background-desktop.svg");
+  }
+
+  .wrapper {
+    max-width: 352px;
+  }
+  .component {
+    margin-top: 102px;
+    width: 31.1%;
+  }
+
+  .component__title {
+    font-size: 28px;
+    padding-top: 45px;
+  }
+
+  .component__description {
+    font-size: 16px;
+    padding-right: 18px;
+  }
+
+  .button {
+    margin-top: 42px;
+    margin-bottom: 31px;
+  }
+
+  .component__plan {
+    margin-right: 74px;
+  }
+  .component__plan-title {
+    font-size: 16px;
+    font-weight: 900;
+  }
+  .component__icon {
+    margin-left: 6px;
+  }
+
+  .component__price {
+    margin-top: 7px;
+    font-size: 16px;
+  }
+
+  .component__change {
+    margin-right: 10px;
+  }
+  .component__cancel {
+    margin-bottom: 46px;
+  }
+}
