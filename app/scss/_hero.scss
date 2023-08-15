@@ -1,0 +1,83 @@
+.hero {
+  background-color: $color-veryLightGrayishBlue;
+
+  .container {
+    @include breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__image {
+    position: relative;
+    // background-image: url("/images/bg-intro-mobile.svg");
+    background-image: url("https://raw.githubusercontent.com/utkucanyilmaz/frontendmentor-easyBankLandingPage/4a13824cbd3c654efefd2f18be31b5e67c37e9d4/images/bg-intro-mobile.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 17.5rem;
+
+    @include breakpoint-up(medium) {
+      min-height: 25rem;
+      background-position: center 60%;
+    }
+
+    @include breakpoint-up(large) {
+      flex: 3;
+      order: 2;
+      height: 41rem;
+      background-image: none;
+      // background-image: url("/images/bg-intro-desktop.svg");
+      // background-position: left center;
+    }
+
+    &::before {
+      @include breakpoint-up(large) {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        // background-image: url("/images/bg-intro-desktop.svg");
+        background-image: url("https://raw.githubusercontent.com/utkucanyilmaz/frontendmentor-easyBankLandingPage/4a13824cbd3c654efefd2f18be31b5e67c37e9d4/images/bg-intro-desktop.svg");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        width: 150%;
+        background-size: 122%;
+        background-position: 0% 83%;
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      // background-image: url("/images/image-mockups.png");
+      background-image: url("https://raw.githubusercontent.com/utkucanyilmaz/frontendmentor-easyBankLandingPage/main/images/image-mockups.png");
+      background-size: 93%;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+
+      @include breakpoint-up(medium) {
+        background-size: 52%;
+      }
+
+      @include breakpoint-up(large) {
+        width: 120%;
+        height: 122%;
+        background-size: 94%;
+        background-position: center 150%;
+        left: 22%;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include breakpoint-up(large) {
+      flex: 2;
+      order: 1;
+      text-align: left;
+    }
+  }
+}
