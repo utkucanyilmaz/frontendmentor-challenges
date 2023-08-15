@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body
+    class="flex flex-col items-center justify-center font-spacemono bg-lightgrayishcyan"
+  >
+    <h1 class="text-verydarkcyan tracking-[0.4em] py-10 text-2xl md:mt-[116px]">
+      SPLI<br />TTER
+    </h1>
+    <main class="max-w-[375px] md:min-w-[924px] md:mt-12">
+      <div class="bg-white p-6 rounded-3xl md:grid md:grid-cols-2 md:p-9">
+        <div class="md:px-2">
+          <div class="p-2">
+            <label for="bill" class="label">Bill</label>
+
+            <div class="relative">
+              <img
+                class="absolute top-1/2 -translate-y-1/2 left-5"
+                src="./images/icon-dollar.svg"
+                alt="dollar-sign"
+              />
+              <input
+                class="input focus:outline-1 focus:outline-strongcyan"
+                type="text"
+                id="bill"
+                placeholder="0"
+              />
+            </div>
+          </div>
+
+          <div class="mt-5 p-2">
+            <p class="label">Select Tip %</p>
+            <div
+              id="buttons"
+              class="grid grid-cols-2 gap-4 mt-3 md:gap-y-4 md:gap-x-2 md:mt-5 md:grid-cols-3"
+            >
+              <button
+                class="percentage-button button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
+              >
+                5%
+              </button>
+              <button
+                class="percentage-button button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
+              >
+                10%
+              </button>
+              <button
+                class="percentage-button button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
+              >
+                15%
+              </button>
+              <button
+                class="percentage-button button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
+              >
+                25%
+              </button>
+              <button
+                class="percentage-button button hover:bg-lightgrayishcyan hover:text-verydarkcyan"
+              >
+                50%
+              </button>
+              <input
+                id="custom-tip"
+                class="input rounded-md focus:outline-1 focus:outline-strongcyan md:placeholder:text-left md:text-left md:w-[120px]"
+                type="text"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+
+          <div class="mt-5 p-2">
+            <label for="number-of-people" class="block label"
+              >Number of People</label
+            >
+            <div class="relative">
+              <img class="icon" src="./images/icon-person.svg" alt="Person" />
+              <input
+                type="text"
+                id="number-of-people"
+                class="input focus:outline-1 focus:outline-strongcyan"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-verydarkcyan text-white mt-6 p-6 pt-10 rounded-2xl md:ml-6 md:mt-0 md:p-10"
+        >
+          <div class="flex justify-between items-center md:mt-3">
+            <div class="flex flex-col">
+              <p>Tip Amount</p>
+              <small class="text-grayishcyan">/ person</small>
+            </div>
+            <div id="tip-amount" class="text-3xl text-strongcyan md:text-5xl">
+              $0.00
+            </div>
+          </div>
+          <div class="mt-6 flex justify-between items-center md:mt-12">
+            <div class="flex flex-col">
+              <p>Total</p>
+              <small class="text-grayishcyan">/ person</small>
+            </div>
+            <div id="total" class="text-3xl text-strongcyan md:text-5xl">
+              $0.00
+            </div>
+          </div>
+          <button
+            id="reset-btn"
+            class="mt-9 text-xl text-verydarkcyan bg-strongcyan w-[100%] py-[10px] rounded hover:bg-lightgrayishcyan md:mt-32 disabled:opacity-30"
+            disabled
+          >
+            RESET
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button {
+    @apply flex items-center justify-center bg-verydarkcyan text-2xl w-[146px] py-2 text-white rounded-md md:w-[120px];
+  }
+
+  .input {
+    @apply w-full text-right text-[24px] py-1 px-4 bg-verylightgrayishcyan placeholder:text-right text-verydarkcyan placeholder:text-darkgrayishcyan;
+  }
+
+  .invalid-input {
+    @apply border-red-500 border-2 rounded-md;
+  }
+
+  .label {
+    @apply block text-darkgrayishcyan mb-2;
+  }
+
+  .icon {
+    @apply absolute top-1/2 -translate-y-1/2 left-5;
+  }
+
+  .active {
+    @apply bg-strongcyan text-verydarkcyan;
+  }
+}
