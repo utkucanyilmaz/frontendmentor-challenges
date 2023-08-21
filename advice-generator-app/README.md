@@ -12,7 +12,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/utkucanyilmaz/advice-generator-app]
+- Solution URL: [https://github.com/utkucanyilmaz/frontendmentor-challenges/tree/main/advice-generator-app]
 - Live Site URL: [https://advice-generator-utkucanyilmaz.netlify.app/]
 
 ### Built with

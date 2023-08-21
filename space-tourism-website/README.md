@@ -28,7 +28,7 @@ npm run dev
 
 ### Links
 
-- Solution URL: [https://github.com/utkucanyilmaz/space-tourism-website]
+- Solution URL: [https://github.com/utkucanyilmaz/frontendmentor-challenges/tree/main/space-tourism-website]
 - Live Site URL: [https://space-tourism-utkucanyilmaz.netlify.app/]
 
 ### Built with

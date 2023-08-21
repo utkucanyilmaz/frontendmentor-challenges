@@ -15,7 +15,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/utkucanyilmaz/fylo-dark-theme-landing-page]
+- Solution URL: [https://github.com/utkucanyilmaz/frontendmentor-challenges/tree/main/fylo-dark-theme-landing-page]
 - Live Site URL: [https://fylo-landing-utkucanyilmaz.netlify.app//]
 
 ### Built with

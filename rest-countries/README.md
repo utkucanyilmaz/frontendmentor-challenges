@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/utkucanyilmaz/rest-countries]
+- Solution URL: [https://github.com/utkucanyilmaz/frontendmentor-challenges/tree/main/rest-countries]
 - Live Site URL: [https://rest-countries-utkucanyilmaz.netlify.app/]
 
 ### Built with
